@@ -1,0 +1,73 @@
+.faces {
+  position: fixed;
+  top: calc(50vh - 100px);
+  left: calc(52vw - 40px);
+  height: 200px;
+  width: 73px;
+  background-color: none;
+  animation: drew-story 2s linear calc(var(--scroll) * -2s) paused;
+  opacity: 0;
+}
+
+.wiggle {
+  position: fixed;
+  height: 200px;
+  transform-origin: bottom center;
+  background-color: none;
+  animation: wiggle-effect 2s infinite;
+  background-color: none;
+
+}
+
+@keyframes wiggle-effect {
+  0% {
+    transform: rotate(5deg);
+  }
+
+  50% {
+    transform: rotate(-5deg);
+  }
+
+  100% {
+    transform: rotate(5deg);
+  }
+}
+
+@keyframes drew-story {
+  0% {
+    transform: translate(-100vw, 0);
+    opacity: 1;
+  }
+
+  10% {
+    transform: translate(30vw, 0);
+  }
+
+  20% {
+    transform: translate(30vw, 5vh) scale(1.2);
+  }
+
+  30% {
+
+    transform: translate(0, 0) scale(1.2);
+  }
+
+  40% {}
+
+  50% {
+    transform: translate(0, 85vh) rotate(0deg) scale(4);
+  }
+
+  60% {}
+
+  70% {}
+
+  80% {}
+
+  90% {}
+
+  100% {
+    transform: translate(0, 0) rotate(360deg) scale(1);
+    opacity: 1;
+  }
+}

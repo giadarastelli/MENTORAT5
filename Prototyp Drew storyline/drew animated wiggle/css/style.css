@@ -1,0 +1,30 @@
+body {
+  background: red;
+  color: black;
+  height: 1300vh;
+}
+
+
+.background {
+  /* auch noch cool: */
+  /* position: absolute; */
+  position: fixed;
+  width: 100vh;
+}
+
+.title {
+  position: relative;
+  top: 30vh;
+}
+
+.title-picture {
+  max-width: 400px;
+  width: 60vw;
+}
+
+.title-text {
+  font-family: 'Nanum Pen Script';
+  font-size: 1.8rem;
+  position: relative;
+  top: 30px;
+}
