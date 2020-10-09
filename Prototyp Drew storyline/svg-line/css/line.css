@@ -1,0 +1,43 @@
+body {
+  background: white;
+}
+
+/* linie: */
+svg {
+  position: absolute;
+  width: 100vw;
+}
+
+/* layer in front: */
+.box {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+}
+
+.box1 {
+  top: 52vh;
+  animation: linebox 1s infinite ease-in-out;
+  opacity: 1;
+}
+
+.box2 {
+  top: 51vh;
+  opacity: 0.6;
+}
+
+.box3 {
+  top: 50vh;
+  opacity: 0.5;
+}
+
+@keyframes linebox {
+  0% {
+    top: 52vh;
+  }
+
+  50% {
+    top: 50vh;
+  }
+}

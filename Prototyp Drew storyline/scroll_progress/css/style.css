@@ -1,0 +1,25 @@
+body {
+  background: palevioletred;
+  color: black;
+  height: 1200vh;
+}
+
+/*progress bar*/
+
+.progress {
+  position: fixed;
+  right: 30px;
+  top: 30px;
+  height: 73px;
+  width: 73px;
+}
+
+.progress svg.progress_circle path {
+
+  stroke: black;
+  stroke-width: 2;
+  fill: none;
+  animation: progress_bar_animation 8s;
+  animation-iteration-count: 1;
+  animation-delay: 3s;
+}
