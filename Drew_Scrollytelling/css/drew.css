@@ -1,0 +1,56 @@
+.faces {
+  position: fixed;
+  top: calc(50vh - 100px);
+  left: calc(52vw - 40px);
+  height: 200px;
+  width: 73px;
+  background-color: none;
+  animation: drew-story 2s linear calc(var(--scroll) * -2s) paused;
+}
+
+.wiggle {
+  position: fixed;
+  height: 200px;
+  transform-origin: bottom center;
+  background-color: none;
+  animation: wiggle-effect 2s infinite;
+  background-color: none;
+}
+
+@keyframes wiggle-effect {
+  0% {
+    transform: rotate(5deg);
+  }
+
+  50% {
+    transform: rotate(-5deg);
+  }
+
+  100% {
+    transform: rotate(5deg);
+  }
+}
+
+@keyframes drew-story {
+  0% {}
+
+  10% {}
+
+  20% {}
+
+  30% {}
+
+  40% {}
+
+  50% {}
+
+  60% {}
+
+  70% {}
+
+  80% {}
+
+  90% {}
+
+  100% {}
+}

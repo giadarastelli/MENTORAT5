@@ -1,0 +1,54 @@
+body {
+  font-family: 'Nanum Pen Script';
+  font-size: 1.8rem;
+  background: whitesmoke;
+  height: 1300vh;
+}
+
+.background {
+  position: fixed;
+  width: 100vh;
+}
+
+.title {
+  position: relative;
+  top: 30vh;
+}
+
+.title-picture {
+  max-width: 400px;
+  width: 60vw;
+}
+
+.title-text {
+  position: relative;
+  top: 30px;
+}
+
+.furniture {
+  position: fixed;
+  max-width: 40vw;
+  bottom: 0;
+}
+
+.chair {
+  left: 30vw;
+}
+
+.bed {
+  right: 0;
+}
+
+/* text animation */
+.story-text {
+  width: 0;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 5s linear forwards;
+}
+
+@keyframes typing {
+  from {width: 0%;}
+  to {width: 100%;}
+}
