@@ -7,12 +7,13 @@ body {
 
 .background {
   position: fixed;
-  width: 100vh;
+
 }
 
 .title {
   position: relative;
   top: 30vh;
+
 }
 
 .title-picture {
@@ -49,6 +50,11 @@ body {
 }
 
 @keyframes typing {
-  from {width: 0%;}
-  to {width: 100%;}
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
 }
