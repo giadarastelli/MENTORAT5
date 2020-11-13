@@ -1,0 +1,46 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    .dareyou {
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      height: 100vh;
+      font-size: 6rem;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <button class="dareyou">touch me ...</button>
+
+  <script>
+    navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
+
+    if (navigator.vibrate) {
+      document.querySelector(".dareyou").addEventListener("click", function() {
+        window.navigator.vibrate([125, 75, 125, 275, 200, 275, 125, 75, 125, 275, 200, 600, 200, 600]);
+        //navigator.vibrate([125, 75, 125, 275, 200, 275, 125, 75, 125, 275, 200, 600, 200, 600]);
+        console.log("you touched me! that's not " + window.navigator.vibrate(300))
+        this.innerHTML = window.navigator.vibrate(300);
+        //alert();
+        new Notification( string Message, object Options );
+
+      })
+    } else {
+      document.querySelector(".dareyou").innerHTML = "can't vibrate"
+      alert();
+    }
+  </script>
+  <script src="notification.js"></script>
+</body>
+
+</html>
