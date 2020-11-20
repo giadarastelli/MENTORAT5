@@ -1,0 +1,50 @@
+.furniture {
+  position: fixed;
+  height: 50vh;
+  bottom: 0;
+}
+
+.chair {
+  left: 30vw;
+  opacity: 0;
+  animation: chair 2s ease-in-out calc(var(--scroll) * -2s) paused;
+  
+}
+
+.bed {
+  right: 0;
+  opacity: 0;
+  animation: bed 2s ease-in-out calc(var(--scroll) * -2s) paused;
+  
+}
+
+.desk {
+  left:0;
+  opacity: 0;
+  animation: desk 2s ease-in-out calc(var(--scroll) * -2s) paused;
+  
+}
+
+
+@keyframes desk{
+  0%{transform: translate(-50vw,0);}
+  30%{transform: translate(-50vw,0);opacity: 0;}
+  35%{transform: translate(0,0);opacity: 1;}
+  100%{opacity: 1;}
+}
+
+@keyframes chair{
+  0%{transform: translate(70vw,0);}
+  30%{transform: translate(70vw,0);opacity: 0;}
+  35%{transform: translate(0,0);opacity: 1;}
+  100%{opacity: 1;}
+}
+
+@keyframes bed{
+  0%{transform: translate(70vw,0);}
+  40%{transform: translate(30vw,0);opacity: 0;}
+  50%{transform: translate(0,0);opacity: 1;}
+  100%{opacity: 1;}
+}
+
+

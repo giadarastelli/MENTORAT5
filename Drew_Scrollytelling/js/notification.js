@@ -12,16 +12,16 @@ var updateProgress = function() {
     console.log(dataset);
 
     //trigger the FIRST mail:
-    if (percentage === 10 && dataset === "email trigger1") {
+    if (percentage === 75 && dataset === "email trigger1") {
       document.querySelector(".email").classList.remove("trigger1");
       show_email1();
     }
 
     //trigger the SECOND mail:
-    if (percentage === 20 && dataset === "email") {
-      document.querySelector(".email").classList.add("trigger1");
-      show_email2();
-    }
+    // if (percentage === 90 && dataset === "email") {
+    //   document.querySelector(".email").classList.add("trigger1");
+    //   show_email2();
+    // }
   })
 }
 updateProgress();
@@ -31,7 +31,6 @@ $(window).scroll(updateProgress);
 //notification Drew
 function show_email1() {
   console.log('works')
-  //document.body.classList.add("stop-scrolling");
   disableScroll();
   toast.create({
     title: 'From: Mr Bosstitch <br> Subject: New Project',
@@ -39,6 +38,7 @@ function show_email1() {
     icon: "img/button-mail.png",
     callback: function() {
       enableScroll();
+      SecondPart();
     }
   });
 };
@@ -46,7 +46,6 @@ function show_email1() {
 //notification Drew
 function show_email2() {
   console.log('works')
-  //document.body.classList.add("stop-scrolling");
   disableScroll();
   toast.create({
     title: 'From: Mr Bosstitch <br> Subject: i forgot...',
@@ -54,7 +53,9 @@ function show_email2() {
     icon: "img/button-mail.png",
     callback: function() {
       enableScroll();
+      SecondPart();
     }
+
   });
 };
 
@@ -72,6 +73,10 @@ function disableScroll() {
 
 function enableScroll() {
   window.onscroll = function() {};
+}
+
+function SecondPart() {
+  window.open("part2.html");
 }
 
 

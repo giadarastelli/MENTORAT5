@@ -1,40 +1,46 @@
 .faces {
   position: fixed;
-  top: calc(50vh - 100px);
-  left: calc(52vw - 40px);
-  height: 200px;
+  /* top: calc(50vh - 100px); */
+  bottom:0px;
+  left: calc(50vw - 40px);
+  height: 25vh;
   width: 73px;
-  background-color: none;
-  animation: drew-story 2s linear calc(var(--scroll) * -2s) paused;
+  transform-origin: bottom;
+  animation: drew-story 2s ease-in-out calc(var(--scroll) * -2s) paused;
 }
 
 .wiggle {
   position: fixed;
-  height: 200px;
+  height: 25vh;
   transform-origin: bottom center;
   background-color: none;
-  animation: wiggle-effect 2s infinite;
+  animation: wiggle-effect 2s ease-in-out infinite;
   background-color: none;
 }
 
 @keyframes wiggle-effect {
   0% {
-    transform: rotate(5deg);
+    transform: rotate(2deg);
   }
 
   50% {
-    transform: rotate(-5deg);
+    transform: rotate(-2deg);
   }
 
   100% {
-    transform: rotate(5deg);
+    transform: rotate(2deg);
   }
 }
 
 @keyframes drew-story {
-  0% {}
+  0% {
+    
+    transform: translate(60vw,0) scale(2);
+  }
 
-  10% {}
+  10% {
+    transform: translate(0,0) scale(3);
+  }
 
   20% {}
 
@@ -52,5 +58,5 @@
 
   90% {}
 
-  100% {}
+  100% {transform: translate(0,0) scale(3)}
 }

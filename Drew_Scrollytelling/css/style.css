@@ -1,20 +1,22 @@
-body {
+body{
   font-family: 'Nanum Pen Script';
-  font-size: 1.8rem;
+  font-size: 3rem;
   background: whitesmoke;
+}
+
+body.part1 {
   height: 1300vh;
 }
 
-.background {
+.paper-texture {
   position: fixed;
-
-
+  height: 100%;
 }
 
 .title {
   position: relative;
   top: 30vh;
-
+  animation: title-fadeout 2s ease-in calc(var(--scroll) * -2s) paused;
 }
 
 .title-picture {
@@ -27,27 +29,16 @@ body {
   top: 30px;
 }
 
-.furniture {
+/* part1 */
+.story-text{
   position: fixed;
-  max-width: 40vw;
-  bottom: 0;
-}
-
-.chair {
-  left: 30vw;
-}
-
-.bed {
-  right: 0;
-}
-
-/* text animation */
-.story-text {
+  top: 10vh;
+  left:10vw;
   width: 0;
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
-  animation: typing 5s linear forwards;
+  animation: typing 2s linear forwards;
 }
 
 @keyframes typing {
@@ -58,4 +49,16 @@ body {
   to {
     width: 100%;
   }
+}
+
+@keyframes title-fadeout{
+  0%{
+    transform: translate(0,0);
+    opacity: 1;
+  }
+
+  4%{
+    transform: translate(0,-50vh);
+  }
+
 }
