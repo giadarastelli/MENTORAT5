@@ -1,11 +1,11 @@
-body{
+body {
   font-family: 'Nanum Pen Script';
   font-size: 3rem;
   background: whitesmoke;
 }
 
 body.part1 {
-  height: 1300vh;
+  height: 1000vh;
 }
 
 .paper-texture {
@@ -22,6 +22,7 @@ body.part1 {
 .title-picture {
   max-width: 400px;
   width: 60vw;
+  animation: wiggle-effect 2s infinite;
 }
 
 .title-text {
@@ -30,10 +31,10 @@ body.part1 {
 }
 
 /* part1 */
-.story-text{
+.story-text {
   position: fixed;
   top: 10vh;
-  left:10vw;
+  left: 10vw;
   width: 0;
   display: inline-block;
   overflow: hidden;
@@ -51,14 +52,14 @@ body.part1 {
   }
 }
 
-@keyframes title-fadeout{
-  0%{
-    transform: translate(0,0);
+@keyframes title-fadeout {
+  0% {
+    transform: translate(0, 0);
     opacity: 1;
   }
 
-  4%{
-    transform: translate(0,-50vh);
+  4% {
+    transform: translate(0, -50vh);
   }
 
 }

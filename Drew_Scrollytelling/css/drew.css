@@ -1,9 +1,9 @@
 .faces {
   position: fixed;
   /* top: calc(50vh - 100px); */
-  bottom:0px;
+  bottom: 0px;
   left: calc(50vw - 40px);
-  height: 25vh;
+  height: 50vh;
   width: 73px;
   transform-origin: bottom;
   animation: drew-story 2s ease-in-out calc(var(--scroll) * -2s) paused;
@@ -11,7 +11,7 @@
 
 .wiggle {
   position: fixed;
-  height: 25vh;
+  height: 50vh;
   transform-origin: bottom center;
   background-color: none;
   animation: wiggle-effect 2s ease-in-out infinite;
@@ -34,19 +34,27 @@
 
 @keyframes drew-story {
   0% {
-    
-    transform: translate(60vw,0) scale(2);
+
+    transform: translate(60vw, 0) scale(1);
   }
 
   10% {
-    transform: translate(0,0) scale(3);
+    transform: translate(0, 0) scale(1);
   }
 
   20% {}
 
-  30% {}
+  40% {
+    transform: translate(0, 0) scale(1);
+  }
 
-  40% {}
+  47% {
+    transform: translate(0, -22vh) scale(1);
+  }
+
+  50% {
+    transform: translate(0, -20vh) scale(1);
+  }
 
   50% {}
 
@@ -58,5 +66,7 @@
 
   90% {}
 
-  100% {transform: translate(0,0) scale(3)}
+  100% {
+    transform: translate(0, -20vh) scale(1)
+  }
 }
