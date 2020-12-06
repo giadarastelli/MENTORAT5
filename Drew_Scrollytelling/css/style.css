@@ -1,16 +1,37 @@
+/* general */
 body {
   font-family: 'Nanum Pen Script';
   font-size: 3rem;
   background: whitesmoke;
 }
 
-body.part1 {
-  height: 1000vh;
-}
-
 .paper-texture {
   position: fixed;
   height: 100%;
+}
+
+.up{
+  position: fixed;
+  top: 1vh;
+  left: calc(50vw - 25px);
+  width: 10vw;
+  max-width: 50px;
+  transform: scale(1);
+  animation: up 4s calc(var(--scroll) * -2s) ease-in-out paused;
+}
+
+.scrolldown{
+  position: fixed;
+  top: 90vh;
+  left: calc(50vw - 25px);
+  width: 10vw;
+  max-width: 50px;
+  animation: scrolldown 4s calc(var(--scroll) * -2s) ease-in-out paused;
+}
+
+/* part1 */
+body.part1 {
+  height: 1000vh;
 }
 
 .title {
@@ -30,7 +51,6 @@ body.part1 {
   top: 30px;
 }
 
-/* part1 */
 .story-text {
   position: fixed;
   top: 10vh;
@@ -41,6 +61,73 @@ body.part1 {
   white-space: nowrap;
   animation: typing 2s linear forwards;
 }
+
+
+/* part2 */
+body.part2 {
+  height: 1000vh;
+}
+
+.button-video {
+  position: fixed;
+  top: calc(50vh - 15vw);
+  left: calc(50vw - 15vw);
+  width: 30vw;
+  transform: scale(0);
+  animation: video-button 4s calc(var(--scroll) * -2s) ease-in-out paused;
+}
+
+/* part3 */
+body.part3{
+  background-color: black;
+  color: white;
+}
+
+/* part4 */
+body.part4 {
+  height: 1000vh;
+}
+
+.up.part4{
+  background-color: white;
+}
+
+/* part5 */
+body.part5 {
+  height: 1000vh;
+  background-color: black;
+}
+
+.home{
+  bottom: 5vw;
+  left: calc(50vw - 25px);
+  width: 50px;
+}
+
+.credits{
+  color: white;
+  text-align: center;
+  top: calc(50vh - 5vw);
+  left: 0;
+  width: 100vw;
+  max-width: none;
+}
+
+.fade-out{
+  position: fixed;
+  top: calc(50vh - 50vw);
+  width: 100vw;
+  transform: scale(0); 
+  animation: fade-out 4s calc(var(--scroll) * -2s) ease-in-out paused;
+}
+
+.hidden {
+  opacity: 0;
+  animation: show-paper 4s calc(var(--scroll) * -2s) ease-in-out paused;
+}
+
+
+
 
 @keyframes typing {
   from {
@@ -61,5 +148,57 @@ body.part1 {
   4% {
     transform: translate(0, -50vh);
   }
-
 }
+
+@keyframes video-button {
+  47% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fade-out {
+  46% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(2);
+  }
+}
+
+@keyframes up {
+  0% {
+    transform: translate(0,0) scale(1);
+  }
+  1% {
+    transform: translate(0,-30vh) scale(0);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes scrolldown {
+  0% {
+    transform: translate(0,0) scale(1);
+  }
+  1% {
+    transform: translate(0, 30vh) scale(0);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes show-paper {
+  5% {
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+}
+

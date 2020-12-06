@@ -77,6 +77,7 @@ function enableScroll() {
 
 function SecondPart() {
   window.open("part2.html");
+  reload();
 }
 
 

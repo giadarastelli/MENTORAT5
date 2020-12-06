@@ -1,4 +1,4 @@
-.faces {
+.faces.part1 {
   position: fixed;
   /* top: calc(50vh - 100px); */
   bottom: 0px;
@@ -6,8 +6,20 @@
   height: 50vh;
   width: 73px;
   transform-origin: bottom;
-  animation: drew-story 2s ease-in-out calc(var(--scroll) * -2s) paused;
+  animation: drew-story1 2s ease-in-out calc(var(--scroll) * -2s) paused;
 }
+
+.faces.part2 {
+  position: fixed;
+  /* top: calc(50vh - 100px); */
+  top: 25vh;
+  left: calc(50vw - 73px);
+  height: 50vh;
+  width: 73px;
+  transform-origin: bottom;
+  animation: drew-story2 2s ease-in-out calc(var(--scroll) * -2s) paused;
+}
+
 
 .wiggle {
   position: fixed;
@@ -32,17 +44,14 @@
   }
 }
 
-@keyframes drew-story {
+@keyframes drew-story1 {
   0% {
-
     transform: translate(60vw, 0) scale(1);
   }
 
   10% {
     transform: translate(0, 0) scale(1);
   }
-
-  20% {}
 
   40% {
     transform: translate(0, 0) scale(1);
@@ -56,6 +65,18 @@
     transform: translate(0, -20vh) scale(1);
   }
 
+  100% {
+    transform: translate(0, -20vh) scale(1)
+  }
+}
+
+@keyframes drew-story2 {
+  0% {transform: translate(0, 0) scale(1);}
+
+  10% {}
+
+  20% {}
+
   50% {}
 
   60% {}
@@ -67,6 +88,6 @@
   90% {}
 
   100% {
-    transform: translate(0, -20vh) scale(1)
+
   }
 }
