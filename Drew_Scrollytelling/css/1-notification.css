@@ -1,18 +1,12 @@
-/* provisorische visuelle mail trigger */
-/* .box{
-  position: absolute;
-  top: 220vh;
-  width:100vw;
-  height:10px;
-  background-color: white;
-} */
+/* PART 1 STYLING: NOTIFICATION */
 
+/* BLOCK SCROLLING */
 .stop-scrolling {
   height: 100%;
   overflow: hidden;
 }
 
-/* code für notification-style */
+/* NOTIFICATION STYLE */
 #cooltoast-container {
   position: fixed;
   top: 0;
@@ -28,8 +22,8 @@
   border-radius: 8px;
   background: #FDFDFD;
   cursor: pointer;
-  box-shadow: 0 1px 6px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.19);
-  animation-duration:  .3s;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.19);
+  animation-duration: .3s;
   animation-name: cooltoast;
   animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
 }
@@ -43,7 +37,7 @@
 
 #cooltoast-container p,
 #cooltoast-container h4 {
-  margin: 3px 0!important;
+  margin: 3px 0 !important;
 }
 
 .cooltoast-title {
@@ -67,7 +61,8 @@
   background: #FFFFFF00;
 }
 
-.cooltoast-toast a, .cooltoast-toast a:hover {
+.cooltoast-toast a,
+.cooltoast-toast a:hover {
   color: #549EDB !important;
   text-decoration: none !important;
 }
@@ -91,9 +86,11 @@
 
 @keyframes cooltoast {
   from {
-    transform: translate3d(0, -400px, 0);;
+    transform: translate3d(0, -400px, 0);
+    ;
     opacity: 0;
   }
+
   to {
     transform: translate3d(0, 0, 0);
     opacity: 1;
@@ -105,6 +102,7 @@
     transform: translate3d(0, 0, 0);
     opacity: 1;
   }
+
   to {
     transform: translate3d(0, -400px, 0);
     opacity: 0;

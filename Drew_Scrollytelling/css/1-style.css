@@ -1,0 +1,164 @@
+/* PART 1 STYLING: INTRO */
+
+/* PART 1 BODY */
+body.part1 {
+  height: 1000vh;
+}
+
+/* TITLE SCREEN */
+.title {
+  position: relative;
+  top: 30vh;
+  animation: title-fadeout 2s ease-in calc(var(--scroll) * -2s) paused;
+}
+
+.title-picture {
+  max-width: 400px;
+  width: 60vw;
+  animation: wiggle-effect 2s infinite;
+}
+
+.title-text {
+  position: relative;
+  top: 30px;
+}
+
+/* FURNITURE */
+.furniture {
+  position: fixed;
+  height: 50vh;
+  bottom: 0;
+}
+
+.chair {
+  left: calc(50vw - 10vh);
+  opacity: 0;
+  animation: chair 2s ease-in-out calc(var(--scroll) * -2s) paused;
+}
+
+.bed {
+  right: calc(50vw - 40vh);
+  opacity: 0;
+  animation: bed 2s ease-in-out calc(var(--scroll) * -2s) paused;
+}
+
+.desk {
+  left: calc(50vw - 30vh);
+  opacity: 0;
+  z-index: 10;
+  animation: desk 2s ease-in-out calc(var(--scroll) * -2s) paused;
+}
+
+/* DREW */
+.faces.part1 {
+  position: fixed;
+  bottom: 0px;
+  left: calc(50vw - 40px);
+  height: 50vh;
+  width: 73px;
+  transform-origin: bottom;
+  animation: drew-story1 2s ease-in-out calc(var(--scroll) * -2s) paused;
+}
+
+/* ANIMATION DREW */
+@keyframes drew-story1 {
+  0% {
+    transform: translate(60vw, 0) scale(1);
+  }
+
+  10% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  40% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  47% {
+    transform: translate(0, -22vh) scale(1);
+  }
+
+  50% {
+    transform: translate(0, -20vh) scale(1);
+  }
+
+  100% {
+    transform: translate(0, -20vh) scale(1)
+  }
+}
+
+/* ANIMATION TITEL-TEXT */
+@keyframes title-fadeout {
+  0% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+
+  4% {
+    transform: translate(0, -50vh);
+  }
+}
+
+
+/* ANIMATION FURNITURE DESK */
+@keyframes desk {
+  0% {
+    transform: translate(-50vw, 0);
+  }
+
+  40% {
+    transform: translate(-50vw, 0);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* ANIMATION FURNITURE CHAIR */
+@keyframes chair {
+  0% {
+    transform: translate(70vw, 0);
+  }
+
+  40% {
+    transform: translate(70vw, 0);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* ANIMATION FURNITURE BED */
+@keyframes bed {
+  0% {
+    transform: translate(80vw, 0);
+  }
+
+  60% {
+    transform: translate(80vw, 0);
+    opacity: 1;
+  }
+
+  70% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,115 @@
+/* PART 5 STYLING: COUNTDOWN AND END */
+
+/* PART 5 BODY */
+body.part5 {
+    height: 1000vh;
+    background-color: black;
+    animation: stop-scroll 2s calc(var(--scroll) * -2s) ease-in-out paused;
+}
+
+/* DARK BACKGROUND IN BEGINNING (FOR COUNTDOWN) */
+.paper-texture {
+    opacity: 0;
+    animation: dark-background 2s calc(var(--scroll) * -2s) ease-in-out paused;
+}
+
+/* WHITE BUTTON TO GO BACK */
+.up {
+    background-color: white;
+}
+
+/* BLACK CIRCLE OF FADE OUT*/
+.fade-out {
+    position: fixed;
+    top: calc(50vh - 100vw);
+    left: -50vw;
+    width: 200vw;
+    transform: scale(0);
+    animation: fade-out 2s calc(var(--scroll) * -2s) ease-in-out paused;
+}
+
+/* CREDITS TEXT */
+.credits {
+    color: white;
+    text-align: center;
+    position: fixed;
+    top: calc(50vh - 100px);
+    left: calc(50vw - 25vw);
+    width: 50vw;
+    transform: scale(0);
+    animation: credits 2s calc(var(--scroll) * -2s) ease-in-out paused;
+}
+
+/* CREDITS DREW ICON */
+.credits.drew-icon {
+    left: calc(25vw - 50px);
+    top: 150px;
+    width: 100px;
+    transition: 0.2s;
+}
+
+/* CREDITS HOVER EFFECT DREW ICON */
+.drew-icon:hover {
+    left: calc(25vw - 60px);
+    top:140px;
+    width:120px;
+}
+
+
+/* ANIMATION BACKGROUND-CHANGE */
+@keyframes dark-background {
+    5% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* ANIMATION FADE OUT CIRCLE */
+@keyframes fade-out {
+    90% {
+        transform: scale(0);
+    }
+
+    95% {
+        transform: scale(2);
+    }
+
+    to {
+        transform: scale(2);
+    }
+}
+
+/* ANIMATION CREDITS*/
+@keyframes credits {
+
+    92% {
+        transform: scale(0);
+    }
+
+    95% {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+
+/* KANN MAN (bei body) DEAKTIVIEREN, FALLS NERVT (ABER OHNE STOP-SCROLL IST ANIMATION BEI 100% NICHT MEHR SICHTBAR) */
+@keyframes stop-scroll {
+    95% {
+        overflow: auto;
+    }
+
+    100% {
+        overflow: hidden;
+    }
+}

@@ -1,0 +1,114 @@
+/* MASTER STYLING: FOR ALL HTMLS */
+
+/* MASTER BODY*/
+body {
+  font-family: 'Nanum Pen Script';
+  font-size: 3rem;
+  background: whitesmoke;
+}
+
+/* BACKGROUND */
+.paper-texture {
+  position: fixed;
+  height: 100%;
+}
+
+/* TEXT */
+.story-text {
+  position: fixed;
+  top: 10vh;
+  left: 10vw;
+  width: 0;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 2s linear forwards;
+}
+
+/* BUTTON TO GO BACK */
+.up{
+  position: fixed;
+  top: 1vh;
+  left: calc(50vw - 25px);
+  width: 10vw;
+  max-width: 50px;
+  transform: scale(1);
+  animation: up 2s calc(var(--scroll) * -2s) ease-in-out paused;
+}
+
+/* SCROLL-DOWN ICON */
+.scrolldown{
+  position: fixed;
+  top: 90vh;
+  left: calc(50vw - 25px);
+  width: 10vw;
+  max-width: 50px;
+  animation: scrolldown 2s calc(var(--scroll) * -2s) ease-in-out paused;
+}
+
+/* DREW WIGGLE */
+.wiggle {
+  position: fixed;
+  height: 50vh;
+  transform-origin: bottom center;
+  background-color: none;
+  animation: wiggle-effect 2s ease-in-out infinite;
+  background-color: none;
+}
+
+/* ANIMATION DREW WIGGLE */
+@keyframes wiggle-effect {
+  0% {
+    transform: rotate(2deg);
+  }
+
+  50% {
+    transform: rotate(-2deg);
+  }
+
+  100% {
+    transform: rotate(2deg);
+  }
+}
+
+
+/* ANIMATION TEXT */
+@keyframes typing {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+/* ANIMATION BUTTON TO GO BACK */
+@keyframes up {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  1% {
+    transform: translate(0, -30vh) scale(0);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+/* ANIMATION SCROLL-DOWN ICON */
+@keyframes scrolldown {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  1% {
+    transform: translate(0, 30vh) scale(0);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}

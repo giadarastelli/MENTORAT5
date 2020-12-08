@@ -1,0 +1,78 @@
+/* PART 2 STYLING: BRAINSTORMING */
+
+/* PART 2 BODY */
+body.part2 {
+    height: 1000vh;
+    animation: stop-scroll 2s calc(var(--scroll) * -2s) ease-in-out paused;
+}
+
+/* DREW */
+.faces.part2 {
+    position: fixed;
+    top: 25vh;
+    left: calc(50vw - 73px);
+    height: 50vh;
+    width: 73px;
+    transform-origin: bottom;
+    animation: drew-story2 2s ease-in-out calc(var(--scroll) * -2s) paused;
+}
+
+/* VIDEO CALL BUTTON */
+.button-video {
+    position: fixed;
+    top: calc(50vh - 15vw);
+    left: calc(50vw - 15vw);
+    width: 30vw;
+    transform: scale(0);
+    animation: video-button 2s calc(var(--scroll) * -2s) ease-in-out paused;
+}
+
+/* ANIMATION DREW */
+@keyframes drew-story2 {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    10% {}
+
+    20% {}
+
+    50% {}
+
+    60% {}
+
+    70% {}
+
+    80% {}
+
+    90% {}
+
+    100% {}
+}
+
+/* ANIMATION VIDEO-BUTTON */
+@keyframes video-button {
+    92% {
+        transform: scale(0);
+    }
+
+    95% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* KANN MAN DEAKTIVIEREN, FALLS NERVT (ABER OHNE STOP-SCROLL IST ANIMATION BEI 100% NICHT MEHR SICHTBAR) */
+@keyframes stop-scroll {
+    95% {
+        overflow: auto;
+    }
+
+    100% {
+        overflow: hidden;
+    }
+}

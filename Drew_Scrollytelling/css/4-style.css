@@ -1,0 +1,44 @@
+/* PART 4 STYLING: IDEAS GO TO TRASH */
+
+/* PART 4 BODY */
+body.part4 {
+    height: 1000vh;
+    animation: stop-scroll 2s calc(var(--scroll) * -2s) ease-in-out paused;
+}
+
+/* MAIL BUTTON */
+.button-mail {
+    position: fixed;
+    top: calc(50vh - 15vw);
+    left: calc(50vw - 15vw);
+    width: 30vw;
+    transform: scale(0);
+    animation: mail-button 2s calc(var(--scroll) * -2s) ease-in-out paused;
+}
+
+/* ANIMATION MAIL BUTTON */
+@keyframes mail-button {
+    92% {
+        transform: scale(0);
+    }
+
+    95% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* KANN MAN DEAKTIVIEREN, FALLS NERVT (ABER OHNE STOP-SCROLL IST ANIMATION BEI 100% NICHT MEHR SICHTBAR) */
+@keyframes stop-scroll {
+    95% {
+        overflow: auto;
+    }
+
+    100% {
+        overflow: hidden;
+    }
+}
