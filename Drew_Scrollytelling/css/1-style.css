@@ -82,8 +82,11 @@ body.part1 {
     transform: translate(0, -20vh) scale(1);
   }
 
-  100% {
+  90% {
     transform: translate(0, -20vh) scale(1)
+  }
+  95% {
+    transform: translate(0, -20vh) scale(1.5)
   }
 }
 
@@ -103,11 +106,11 @@ body.part1 {
 /* ANIMATION FURNITURE DESK */
 @keyframes desk {
   0% {
-    transform: translate(-50vw, 0);
+    transform: translate(-55vw, 0);
   }
 
   40% {
-    transform: translate(-50vw, 0);
+    transform: translate(-55vw, 0);
     opacity: 1;
   }
 
@@ -148,12 +151,12 @@ body.part1 {
     transform: translate(80vw, 0);
   }
 
-  60% {
+  55% {
     transform: translate(80vw, 0);
     opacity: 1;
   }
 
-  70% {
+  60% {
     transform: translate(0, 0);
     opacity: 1;
   }

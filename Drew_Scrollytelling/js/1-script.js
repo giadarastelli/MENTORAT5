@@ -51,98 +51,84 @@ phrase7.style.display = "none";
 
 
 // STORYLINE, MAKING DREW FACES AND STORY TEXTS VISIBLE
-var newFaces = function () {
-  offsetTop = window.pageYOffset;
-  console.log(offsetTop);
 
-  //FACE 1
-  if (offsetTop >= 0 && offsetTop < 8 * screen.height) {
-    happyFace.style.opacity = 1;
-  } else {
-    happyFace.style.opacity = 0;
-  }
-  //FACE 2
-  if (offsetTop >= 8 * screen.height && offsetTop < 12 * screen.height) {
-    surprisedFace.style.opacity = 1;
-  } else {
-    surprisedFace.style.opacity = 0;
-  }
-
-  //TEXT 1
-  if (offsetTop >= screen.height && offsetTop < 2 * screen.height) {
-    phrase1.style.display = "block";
-  } else {
-    phrase1.style.display = "none";
-  }
-
-  //TEXT 2
-  if (offsetTop >= 2 * screen.height && offsetTop < 3 * screen.height) {
-    phrase2.style.display = "block";
-  } else {
-    phrase2.style.display = "none";
-  }
-
-  //TEXT 3
-  if (offsetTop >= 4 * screen.height && offsetTop < 5 * screen.height) {
-    phrase3.style.display = "block";
-  } else {
-    phrase3.style.display = "none";
-  }
-
-  //TEXT 4
-  if (offsetTop >= 5 * screen.height && offsetTop < 6 * screen.height) {
-    phrase4.style.display = "block";
-  } else {
-    phrase4.style.display = "none";
-  }
-
-  //TEXT 5
-  if (offsetTop >= 6 * screen.height && offsetTop < 7 * screen.height) {
-    phrase5.style.display = "block";
-  } else {
-    phrase5.style.display = "none";
-  }
-
-  //TEXT 6
-  if (offsetTop >= 7 * screen.height && offsetTop < 8 * screen.height) {
-    phrase6.style.display = "block";
-  } else {
-    phrase6.style.display = "none";
-  }
-
-  //TEXT 7
-  if (offsetTop >= 8 * screen.height && offsetTop < 12 * screen.height) {
-    phrase7.style.display = "block";
-  } else {
-    phrase7.style.display = "none";
-  }
-}
-
-window.addEventListener("scroll", newFaces);
-
-
-
-
-
-
-
-
-
-
-
-//NOTIFICATION SCRIPT
+// SCROLL UPDATE FUNCTION
 var updateProgress = function () {
-  // VALUES CALCULATE
   var scroll = $(window).scrollTop();
   var height = $(document).height() - $(window).height();
   var percentage = Math.round(scroll * 100 / height);
 
-  // TRIGGER THE FIRST MAIL
-  let search = document.querySelectorAll(".email");
+  // START STORY
+  let search = document.querySelectorAll(".part1");
   search.forEach(function () {
+
+    //FACE 1 (HAPPY)
+    if (percentage >= 1 && percentage < 90) {
+      happyFace.style.opacity = 1;
+    } else {
+      happyFace.style.opacity = 0;
+    }
+
+    //FACE 2 (SURPRISED)
+    if (percentage >= 90 && percentage < 100) {
+      surprisedFace.style.opacity = 1;
+    } else {
+      surprisedFace.style.opacity = 0;
+    }
+
+    //TEXT 1
+    if (percentage >= 10 && percentage < 20) {
+      phrase1.style.display = "block";
+    } else {
+      phrase1.style.display = "none";
+    }
+
+    //TEXT 2
+    if (percentage >= 20 && percentage < 30) {
+      phrase2.style.display = "block";
+    } else {
+      phrase2.style.display = "none";
+    }
+
+    //TEXT 3
+    if (percentage >= 30 && percentage < 50) {
+      phrase3.style.display = "block";
+    } else {
+      phrase3.style.display = "none";
+    }
+
+    //TEXT 4
+    if (percentage >= 50 && percentage < 70) {
+      phrase4.style.display = "block";
+    } else {
+      phrase4.style.display = "none";
+    }
+
+    //TEXT 5
+    if (percentage >= 70 && percentage < 80) {
+      phrase5.style.display = "block";
+    } else {
+      phrase5.style.display = "none";
+    }
+
+    // TEXT 6 
+    if (percentage >= 80 && percentage < 90) {
+      phrase6.style.display = "block";
+    } else {
+      phrase6.style.display = "none";
+    }
+
+    //TEXT 7
+    if (percentage >= 90 && percentage < 100) {
+      phrase7.style.display = "block";
+    } else {
+      phrase7.style.display = "none";
+    }
+
+
     let dataset = document.querySelector(".email").className
-    console.log(dataset);
-    if (percentage === 75 && dataset === "email trigger1") {
+    // TRIGGER EMAIL!!
+    if (percentage >= 95 && dataset === "email trigger1") {
       document.querySelector(".email").classList.remove("trigger1");
       show_email1();
     }
@@ -151,6 +137,9 @@ var updateProgress = function () {
 updateProgress();
 $(window).scroll(updateProgress);
 
+
+
+// NOTIFICATION SCRIPTS - FOR THE TOAST NOTIFICATION
 
 // FIRST NOTIFICATION CONTENT
 function show_email1() {
@@ -200,11 +189,53 @@ function enableScroll() {
 }
 
 function SecondPart() {
-  window.open("part2.html");
+  window.location.replace("part2.html");
   reload();
 }
 
 
+
+//TYPE-IT TEXT ANIMATIONS
+new TypeIt("#phrase1", {
+  speed: 50,
+  waitUntilVisible: true,
+}).go();
+
+new TypeIt("#phrase2", {
+  speed: 50,
+  waitUntilVisible: true
+}).go();
+
+new TypeIt("#phrase3", {
+  speed: 50,
+  waitUntilVisible: true,
+}).go();
+
+new TypeIt("#phrase4", {
+  speed: 50,
+  waitUntilVisible: true,
+}).go();
+
+new TypeIt("#phrase5", {
+  speed: 50,
+  waitUntilVisible: true,
+}).go();
+
+new TypeIt("#phrase6", {
+  speed: 50,
+  waitUntilVisible: true,
+}).go();
+
+new TypeIt("#phrase7", {
+  speed: 50,
+  waitUntilVisible: true,
+}).go();
+
+
+
+
+
+// TOAST SCRIPT
 (function (root, factory) {
   try {
     // commonjs
