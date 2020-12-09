@@ -14,6 +14,7 @@ body.part2 {
     height: 50vh;
     width: 73px;
     transform-origin: bottom;
+    transform: translate(0, 60vh) scale(2);
     animation: drew-story2 2s ease-in-out calc(var(--scroll) * -2s) paused;
 }
 
@@ -29,15 +30,15 @@ body.part2 {
 
 /* ANIMATION DREW */
 @keyframes drew-story2 {
-    0% {
-        transform: translate(0, 0) scale(1);
-    }
+    0% {}
 
     10% {}
 
     20% {}
 
-    50% {}
+    50% {
+        transform: translate(0, 0) scale(1);
+    }
 
     60% {}
 
