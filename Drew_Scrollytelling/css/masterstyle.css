@@ -4,25 +4,34 @@
 body {
   font-family: 'Nanum Pen Script';
   font-size: 3rem;
-  background: whitesmoke;
+  background: white;
+}
+
+@media screen and (max-width:768px) {
+  body {
+    font-size: 2rem;
+  }
 }
 
 /* BACKGROUND */
 .paper-texture {
   position: fixed;
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.5;
 }
 
 /* TEXT */
 .story-text {
   position: fixed;
+  text-align: center;
   top: 10vh;
   left: 10vw;
   width: 80vw;
 }
 
 /* BUTTON TO GO BACK */
-.up{
+.up {
   position: fixed;
   top: 1vh;
   left: calc(50vw - 25px);
@@ -33,7 +42,7 @@ body {
 }
 
 /* SCROLL-DOWN ICON */
-.scrolldown{
+.scrolldown {
   position: fixed;
   top: 90vh;
   left: calc(50vw - 25px);
