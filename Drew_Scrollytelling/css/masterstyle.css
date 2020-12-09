@@ -10,7 +10,7 @@ body {
 /* BACKGROUND */
 .paper-texture {
   position: fixed;
-  height: 100%;
+  width: 100%;
 }
 
 /* TEXT */

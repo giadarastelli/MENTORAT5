@@ -76,6 +76,8 @@ var updateProgress = function () {
       surprisedFace.style.opacity = 0;
     }
 
+
+    // TEXT START
     //TEXT 1
     if (percentage >= 10 && percentage < 20) {
       phrase1.style.display = "block";
@@ -125,9 +127,9 @@ var updateProgress = function () {
       phrase7.style.display = "none";
     }
 
-
+// TRIGGER EMAIL!!
     let dataset = document.querySelector(".email").className
-    // TRIGGER EMAIL!!
+    
     if (percentage >= 95 && dataset === "email trigger1") {
       document.querySelector(".email").classList.remove("trigger1");
       show_email1();
