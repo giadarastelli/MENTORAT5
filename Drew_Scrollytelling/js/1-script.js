@@ -63,17 +63,24 @@ var updateProgress = function () {
   search.forEach(function () {
 
     //FACE 1 (HAPPY)
-    if (percentage >= 1 && percentage < 90) {
+    if (percentage >= 1 && percentage < 80) {
       happyFace.style.opacity = 1;
     } else {
       happyFace.style.opacity = 0;
     }
 
     //FACE 2 (SURPRISED)
-    if (percentage >= 90 && percentage < 100) {
+    if (percentage >= 80 && percentage < 86) {
       surprisedFace.style.opacity = 1;
     } else {
       surprisedFace.style.opacity = 0;
+    }
+
+    //FACE 2 (THINKING)
+    if (percentage >= 86 && percentage < 99) {
+      thinkingFace.style.opacity = 1;
+    } else {
+      thinkingFace.style.opacity = 0;
     }
 
 
@@ -100,28 +107,28 @@ var updateProgress = function () {
     }
 
     //TEXT 4
-    if (percentage >= 50 && percentage < 70) {
+    if (percentage >= 50 && percentage < 60) {
       phrase4.style.display = "block";
     } else {
       phrase4.style.display = "none";
     }
 
     //TEXT 5
-    if (percentage >= 70 && percentage < 80) {
+    if (percentage >= 60 && percentage < 70) {
       phrase5.style.display = "block";
     } else {
       phrase5.style.display = "none";
     }
 
     // TEXT 6 
-    if (percentage >= 80 && percentage < 90) {
+    if (percentage >= 70 && percentage < 80) {
       phrase6.style.display = "block";
     } else {
       phrase6.style.display = "none";
     }
 
     //TEXT 7
-    if (percentage >= 90 && percentage < 100) {
+    if (percentage >= 80 && percentage < 85) {
       phrase7.style.display = "block";
     } else {
       phrase7.style.display = "none";
@@ -129,10 +136,14 @@ var updateProgress = function () {
 
 // TRIGGER EMAIL!!
     let dataset = document.querySelector(".email").className
-    
-    if (percentage >= 95 && dataset === "email trigger1") {
+    if (percentage >= 85 && dataset === "email trigger1" && percentage <= 87) {
       document.querySelector(".email").classList.remove("trigger1");
       show_email1();
+    }
+
+
+    if (percentage >= 95) {
+      SecondPart();
     }
   })
 }
@@ -153,7 +164,7 @@ function show_email1() {
     icon: "img/button-mail.png",
     callback: function () {
       enableScroll();
-      SecondPart();
+      // SecondPart();
     }
   });
 };

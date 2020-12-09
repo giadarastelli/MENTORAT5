@@ -60,6 +60,16 @@ body.part1 {
   animation: drew-story1 2s ease-in-out calc(var(--scroll) * -2s) paused;
 }
 
+/* IDEA THINKING START */
+.idea-cloud {
+  position: fixed;
+  height: 50vh;
+  top: -20vh;
+  left: -25vh;
+  transform: scale(0); 
+  animation: ideazoom 2s ease-in-out calc(var(--scroll) * -2s) paused, wiggle 2s infinite;
+}
+
 /* ANIMATION DREW */
 @keyframes drew-story1 {
   0% {
@@ -82,11 +92,11 @@ body.part1 {
     transform: translate(0, -20vh) scale(1);
   }
 
-  90% {
+  80% {
     transform: translate(0, -20vh) scale(1);
   }
 
-  94% {
+  84% {
     transform: translate(0, 30vh) scale(2);
   }
 
@@ -123,11 +133,11 @@ body.part1 {
     transform: translate(0, 0);
   }
 
-  90% {
+  80% {
     transform: translate(0, 0) scale(1);
   }
 
-  94% {
+  84% {
     transform: translate(-40vw, 80vh) scale(2);
   }
 
@@ -153,15 +163,12 @@ body.part1 {
     transform: translate(0, 0);
   }
 
-  90% {
+  80% {
     transform: translate(0, 0) scale(1);
   }
 
-  93% {
-    opacity: 1;
-  }
 
-  95% {
+  85% {
     transform: translate(0, 70vh) scale(2);
     opacity: 1;
   }
@@ -182,16 +189,30 @@ body.part1 {
     transform: translate(0, 0);
   }
 
-  90% {
+  80% {
     transform: translate(0, 0) scale(1);
   }
 
-  94% {
+  84% {
     transform: translate(40vw, 80vh) scale(2);
   }
 
   100% {
     transform: translate(40vw, 80vh) scale(2);
     opacity: 1;
+  }
+}
+
+
+
+/* ANIMATION IDEA ZOOM */
+
+@keyframes ideazoom {
+  86% {
+    transform: scale(0);
+  }
+
+  96% {
+    transform: scale(3);
   }
 }
