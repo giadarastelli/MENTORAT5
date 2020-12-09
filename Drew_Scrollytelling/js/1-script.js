@@ -85,14 +85,14 @@ var updateProgress = function () {
 
 
     // TEXT START
-    //TEXT 1
+    //TEXT 1 (HI MY NAME IS DREW...)
     if (percentage >= 10 && percentage < 20) {
       phrase1.style.display = "block";
     } else {
       phrase1.style.display = "none";
     }
 
-    //TEXT 2
+    //TEXT 2 (..AND IM A DESIGNER)
     if (percentage >= 20 && percentage < 30) {
       phrase2.style.display = "block";
     } else {
@@ -142,7 +142,7 @@ var updateProgress = function () {
     }
 
 
-    if (percentage >= 95) {
+    if (percentage >= 92) {
       SecondPart();
     }
   })

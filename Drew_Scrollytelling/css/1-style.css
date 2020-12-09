@@ -67,7 +67,7 @@ body.part1 {
   top: -20vh;
   left: -25vh;
   transform: scale(0); 
-  animation: ideazoom 2s ease-in-out calc(var(--scroll) * -2s) paused, wiggle 2s infinite;
+  animation: ideazoom 2s ease-in-out calc(var(--scroll) * -2s) paused;
 }
 
 /* ANIMATION DREW */
@@ -210,9 +210,11 @@ body.part1 {
 @keyframes ideazoom {
   86% {
     transform: scale(0);
+    filter: drop-shadow(10px 10px 0px black);
   }
 
-  96% {
+  93% {
     transform: scale(3);
+    filter: drop-shadow(10px 10px 0 black);
   }
 }

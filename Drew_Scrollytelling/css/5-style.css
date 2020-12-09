@@ -13,6 +13,12 @@ body.part5 {
     animation: dark-background 2s calc(var(--scroll) * -2s) ease-in-out paused;
 }
 
+
+.count{
+    position: relative;
+    max-width: 20vw;
+}
+
 /* WHITE BUTTON TO GO BACK */
 .up {
     background-color: white;
