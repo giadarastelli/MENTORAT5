@@ -70,12 +70,12 @@ body.part1 {
     transform: translate(0, 0) scale(1);
   }
 
-  40% {
+  45% {
     transform: translate(0, 0) scale(1);
   }
 
   47% {
-    transform: translate(0, -22vh) scale(1);
+    transform: translate(0, -23vh) scale(1);
   }
 
   50% {
@@ -85,8 +85,13 @@ body.part1 {
   90% {
     transform: translate(0, -20vh) scale(1)
   }
-  95% {
-    transform: translate(0, -20vh) scale(1.5)
+
+  94% {
+    transform: translate(0, 30vh) scale(2)
+  }
+
+  100% {
+    transform: translate(0, 30vh) scale(2)
   }
 }
 
@@ -107,19 +112,27 @@ body.part1 {
 @keyframes desk {
   0% {
     transform: translate(-55vw, 0);
+    opacity: 1;
   }
 
   40% {
     transform: translate(-55vw, 0);
-    opacity: 1;
   }
 
   50% {
     transform: translate(0, 0);
-    opacity: 1;
+  }
+
+  90% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  94% {
+    transform: translate(-40vw, 80vh) scale(2);
   }
 
   100% {
+    transform: translate(-40vw, 80vh) scale(2);
     opacity: 1;
   }
 }
@@ -128,19 +141,28 @@ body.part1 {
 @keyframes chair {
   0% {
     transform: translate(70vw, 0);
+    opacity: 1;
   }
 
   40% {
     transform: translate(70vw, 0);
-    opacity: 1;
+
   }
 
   50% {
     transform: translate(0, 0);
+  }
+
+  90% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  93% {
     opacity: 1;
   }
 
-  100% {
+  95% {
+    transform: translate(0, 70vh) scale(2);
     opacity: 1;
   }
 }
@@ -149,19 +171,27 @@ body.part1 {
 @keyframes bed {
   0% {
     transform: translate(80vw, 0);
+    opacity: 1;
   }
 
   55% {
     transform: translate(80vw, 0);
-    opacity: 1;
   }
 
   60% {
     transform: translate(0, 0);
-    opacity: 1;
+  }
+
+  90% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  94% {
+    transform: translate(40vw, 80vh) scale(2);
   }
 
   100% {
+    transform: translate(40vw, 80vh) scale(2);
     opacity: 1;
   }
 }
