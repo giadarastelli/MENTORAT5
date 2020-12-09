@@ -83,15 +83,15 @@ body.part1 {
   }
 
   90% {
-    transform: translate(0, -20vh) scale(1)
+    transform: translate(0, -20vh) scale(1);
   }
 
   94% {
-    transform: translate(0, 30vh) scale(2)
+    transform: translate(0, 30vh) scale(2);
   }
 
   100% {
-    transform: translate(0, 30vh) scale(2)
+    transform: translate(0, 30vh) scale(2);
   }
 }
 

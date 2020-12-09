@@ -9,12 +9,12 @@ body.part2 {
 /* DREW */
 .faces.part2 {
     position: fixed;
-    top: 25vh;
+    bottom: 0px;
     left: calc(50vw - 73px);
     height: 50vh;
     width: 73px;
     transform-origin: bottom;
-    transform: translate(0, 60vh) scale(2);
+    transform: translate(0, 30vh) scale(2);
     animation: drew-story2 2s ease-in-out calc(var(--scroll) * -2s) paused;
 }
 
