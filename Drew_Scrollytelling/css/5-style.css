@@ -64,12 +64,14 @@ body.part5 {
     transform-origin: bottom;
     animation: flaminghot 2s calc(var(--scroll) * -2s) ease-in-out paused;
 }
+
 /* FIRE (SMALL RIGHT) */
 .flame.flame1 {
     width: 60vw;
     max-width: 180px;
     left: calc(50vw - 150px);
 }
+
 /* FIRE (SMALL LEFT) */
 .flame.flame2 {
     width: 60vw;
@@ -223,7 +225,7 @@ body.part5 {
     width: 120px;
 }
 
-.front{
+.front {
     z-index: 20;
 }
 
@@ -286,7 +288,23 @@ body.part5 {
 /* ANIMATION DREW */
 @keyframes drew-story5 {
     0% {
+        transform: translate(3vw, -20vh) scale(0);
+        opacity: 0;
+    }
+
+    20% {
+        transform: translate(3vw, -20vh) scale(0);
+        opacity: 0;
+    }
+
+    31% {
+        transform: translate(3vw, -20vh) scale(0);
+        opacity: 1;
+    }
+
+    35% {
         transform: translate(0, -20vh) scale(1);
+
     }
 
     80% {
