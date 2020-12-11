@@ -13,15 +13,177 @@ body.part5 {
     animation: dark-background 2s calc(var(--scroll) * -2s) ease-in-out paused;
 }
 
-
-.count{
-    position: relative;
-    max-width: 20vw;
+/* SCIBBLE SVG DIV CONTAINER */
+.svg-container {
+    width: 100%;
+    background-color: black;
+    position: fixed;
+    top: -10px;
+    height: 100%;
+    animation: pushup 2s calc(var(--scroll) * -2s) ease-in-out paused;
 }
 
-/* WHITE BUTTON TO GO BACK */
-.up {
-    background-color: white;
+/* FIRST SCRIBBLE SVG */
+.scribble-svg {
+    position: fixed;
+    height: 300vh;
+    top: -100vh;
+    left: -100vw;
+    width: 300vw;
+}
+
+/* SECOND SCRIBBLE SVG */
+.scribble-svg.wide {
+    position: fixed;
+    height: 300vh;
+    top: -100vh;
+    left: -100vw;
+    width: 300vw;
+    animation: scribble 2s calc(var(--scroll) * -2s) ease-in-out paused;
+}
+
+/* SCRIBBLE PATH */
+.scribble-path {
+    stroke: white;
+    fill: none;
+    stroke-width: 1px;
+    stroke-dasharray: 16205px;
+    opacity: 0;
+    animation: scribble 2s calc(var(--scroll) * -2s) ease-in-out paused;
+}
+
+
+/* FIRE */
+.flame {
+    position: fixed;
+    width: 80vw;
+    max-width: 200px;
+    left: calc(50vw - 100px);
+    bottom: 0%;
+    transform: scale(0);
+    transform-origin: bottom;
+    animation: flaminghot 2s calc(var(--scroll) * -2s) ease-in-out paused;
+}
+/* FIRE (SMALL RIGHT) */
+.flame.flame1 {
+    width: 60vw;
+    max-width: 180px;
+    left: calc(50vw - 150px);
+}
+/* FIRE (SMALL LEFT) */
+.flame.flame2 {
+    width: 60vw;
+    max-width: 180px;
+    left: calc(50vw - 50px);
+}
+
+/* COUNTDOWN CONTAINER POSITION */
+.countdown {
+    position: fixed;
+    text-align: center;
+    width: 0px;
+    transform: translate(-100vh, 0);
+    animation: countdown-fade 2s calc(var(--scroll) * -2s) ease-in-out paused;
+}
+
+/* COUNTDOWN DAYS POSITION */
+.count {
+    position: fixed;
+    width: 33vw;
+    max-width: 200px;
+    top: -100px;
+    left: calc(50vw - 100px);
+    padding-top: 50vh;
+}
+
+/* COUNTDOWN DAYS STAY IN MIDDLE ON SMALLER SCREENS */
+@media screen and (max-width:768px) {
+    .count {
+        left: calc(50vw - 16.5vw);
+    }
+}
+
+/* SEPERATE DAYS OF COUNTDOWN */
+.day10 {
+    animation: day10 2s calc(var(--scroll) * -2s) ease-in-out paused;
+}
+
+.day9 {
+    animation: day9 2s calc(var(--scroll) * -2s) ease-in-out paused;
+}
+
+.day8 {
+    animation: day8 2s calc(var(--scroll) * -2s) ease-in-out paused;
+}
+
+.day7 {
+    animation: day7 2s calc(var(--scroll) * -2s) ease-in-out paused;
+}
+
+.day6 {
+    animation: day6 2s calc(var(--scroll) * -2s) ease-in-out paused;
+}
+
+.day5 {
+    animation: day5 2s calc(var(--scroll) * -2s) ease-in-out paused;
+}
+
+.day4 {
+    animation: day4 2s calc(var(--scroll) * -2s) ease-in-out paused;
+}
+
+.day3 {
+    animation: day3 2s calc(var(--scroll) * -2s) ease-in-out paused;
+}
+
+.day2 {
+    animation: day2 2s calc(var(--scroll) * -2s) ease-in-out paused;
+}
+
+.day1 {
+    animation: day1 2s calc(var(--scroll) * -2s) ease-in-out paused;
+}
+
+.day0 {
+    animation: day0 2s calc(var(--scroll) * -2s) ease-in-out paused;
+}
+
+
+/* DREW */
+.faces.part5 {
+    position: fixed;
+    bottom: 0px;
+    left: calc(50vw - 40px);
+    height: 50vh;
+    width: 73px;
+    transform-origin: bottom;
+    animation: drew-story5 2s ease-in-out calc(var(--scroll) * -2s) paused;
+}
+
+/* FURNITURE */
+.furniture {
+    position: fixed;
+    height: 50vh;
+    bottom: 0;
+}
+
+.chair {
+    left: calc(50vw - 10vh);
+    opacity: 0;
+    animation: chair 2s ease-in-out calc(var(--scroll) * -2s) paused;
+}
+
+.bed {
+    right: calc(50vw - 40vh);
+    opacity: 0;
+    animation: bed 2s ease-in-out calc(var(--scroll) * -2s) paused;
+}
+
+.desk {
+    left: calc(50vw - 30vh);
+    opacity: 0;
+    /* z-index: 10; */
+    animation: desk 2s ease-in-out calc(var(--scroll) * -2s) paused;
 }
 
 /* BLACK CIRCLE OF FADE OUT*/
@@ -57,18 +219,370 @@ body.part5 {
 /* CREDITS HOVER EFFECT DREW ICON */
 .drew-icon:hover {
     left: calc(25vw - 60px);
-    top:140px;
-    width:120px;
+    top: 140px;
+    width: 120px;
+}
+
+/* ANIMATION SCRIBBLE */
+@keyframes scribble {
+    0% {
+        opacity: 1;
+        stroke-dashoffset: 16205px;
+    }
+
+    30% {
+        stroke-dashoffset: 0px;
+    }
+
+    40% {
+        opacity: 1;
+        stroke-dashoffset: 0px;
+    }
+}
+
+/* ANIMATION BURNING FIRE */
+@keyframes flaminghot {
+    5% {
+        transform: scale(0);
+    }
+
+    10% {
+        transform: scale(1);
+    }
+
+    17% {
+        transform: scale(1.1);
+    }
+
+    25% {
+        transform: scale(1);
+    }
+
+    28% {
+        transform: scale(0);
+    }
+}
+
+/* ANIMATION SCRIBBLE SACHEN NACH OBEN SCHIEBEN */
+@keyframes pushup {
+    30% {
+        transform: translate(0, 0);
+    }
+
+    40% {
+        transform: translate(0, -450vh);
+    }
+
+    100% {
+        transform: translate(0, -450vh);
+    }
+}
+
+
+/* ANIMATION DREW */
+@keyframes drew-story5 {
+    0% {
+        transform: translate(0, -20vh) scale(1);
+    }
+
+    80% {
+        transform: translate(0, -20vh) scale(1);
+    }
+
+    84% {
+        transform: translate(0, 30vh) scale(2);
+    }
+
+    100% {
+        transform: translate(0, 30vh) scale(2);
+    }
+}
+
+/* ANIMATION FURNITURE DESK */
+@keyframes desk {
+    30% {
+        opacity: 0;
+        transform: translate(0, 0);
+    }
+
+    31% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+
+    80% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    84% {
+        transform: translate(-40vw, 80vh) scale(2);
+    }
+
+    100% {
+        transform: translate(-40vw, 80vh) scale(2);
+        opacity: 1;
+    }
+}
+
+/* ANIMATION FURNITURE CHAIR */
+@keyframes chair {
+    30% {
+        opacity: 0;
+
+    }
+
+    31% {
+        opacity: 1;
+
+    }
+
+    80% {
+        transform: translate(0, 0) scale(1);
+    }
+
+
+    85% {
+        transform: translate(0, 70vh) scale(2);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(0, 70vh) scale(2);
+        opacity: 1;
+    }
+}
+
+/* ANIMATION FURNITURE BED */
+@keyframes bed {
+    30% {
+        opacity: 0;
+    }
+
+    31% {
+        opacity: 1;
+    }
+
+    80% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    84% {
+        transform: translate(40vw, 80vh) scale(2);
+    }
+
+    100% {
+        transform: translate(40vw, 80vh) scale(2);
+        opacity: 1;
+    }
+}
+
+
+/* ANIMATION COUNTDOWN FADE IN */
+@keyframes countdown-fade {
+    0% {
+        transform: translate(-100vh, 0);
+    }
+
+    5% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+/* ANIMATION COUNTDOWN  */
+/* ANIMATION DAY-10 */
+@keyframes day10 {
+    7% {
+        transform: translate(0, 0) rotate(0deg)
+    }
+
+    10% {
+        transform: translate(50vh, 100vh) rotate(90deg)
+    }
+
+    100% {
+        transform: translate(50vh, 100vh) rotate(90deg)
+    }
+}
+
+/* ANIMATION DAY-9 */
+@keyframes day9 {
+    9% {
+        transform: translate(0, 0) rotate(0deg)
+    }
+
+    12% {
+        transform: translate(-50vh, 100vh) rotate(-90deg)
+    }
+
+    100% {
+        transform: translate(-50vh, 100vh) rotate(-90deg)
+    }
+}
+
+/* ANIMATION DAY-8 */
+@keyframes day8 {
+    11% {
+        transform: translate(0, 0) rotate(0deg)
+    }
+
+    14% {
+        transform: translate(-50vh, 100vh) rotate(-90deg)
+    }
+
+    100% {
+        transform: translate(-50vh, 100vh) rotate(-90deg)
+    }
+}
+
+/* ANIMATION DAY-7 */
+@keyframes day7 {
+    13% {
+        transform: translate(0, 0) rotate(0deg)
+    }
+
+    16% {
+        transform: translate(-50vh, 100vh) rotate(-90deg)
+    }
+
+    100% {
+        transform: translate(-50vh, 100vh) rotate(-90deg)
+    }
+}
+
+/* ANIMATION DAY-6 */
+@keyframes day6 {
+    15% {
+        transform: translate(0, 0) rotate(0deg)
+    }
+
+    18% {
+        transform: translate(50vh, 100vh) rotate(90deg)
+    }
+
+    100% {
+        transform: translate(50vh, 100vh) rotate(90deg)
+    }
+}
+
+/* ANIMATION DAY-5 */
+@keyframes day5 {
+    17% {
+        transform: translate(0, 0) rotate(0deg)
+    }
+
+    20% {
+        transform: translate(50vh, 100vh) rotate(90deg)
+    }
+
+    100% {
+        transform: translate(50vh, 100vh) rotate(90deg)
+    }
+}
+
+/* ANIMATION DAY-4 */
+@keyframes day4 {
+    19% {
+        transform: translate(0, 0) rotate(0deg)
+    }
+
+    22% {
+        transform: translate(50vh, 100vh) rotate(90deg)
+    }
+
+    100% {
+        transform: translate(50vh, 100vh) rotate(90deg)
+    }
+}
+
+/* ANIMATION DAY-3 */
+@keyframes day3 {
+    21% {
+        transform: translate(0, 0) rotate(0deg)
+    }
+
+    24% {
+        transform: translate(50vh, 100vh) rotate(90deg)
+    }
+
+    100% {
+        transform: translate(50vh, 100vh)
+    }
+}
+
+/* ANIMATION DAY-2 */
+@keyframes day2 {
+    23% {
+        transform: translate(0, 0) rotate(0deg)
+    }
+
+    26% {
+        transform: translate(50vh, 100vh) rotate(90deg)
+    }
+
+    100% {
+        transform: translate(50vh, 100vh)
+    }
+}
+
+/* ANIMATION DAY-1 */
+@keyframes day1 {
+    25% {
+        transform: translate(0, 0) rotate(0deg)
+    }
+
+    28% {
+        transform: translate(50vh, 100vh) rotate(90deg)
+    }
+
+    100% {
+        transform: translate(50vh, 100vh)
+    }
+}
+
+/* ANIMATION DAY-0 */
+@keyframes day0 {
+    27% {
+        width: 33vw;
+        max-width: 200px;
+        transform: translate(0, 0);
+    }
+
+    29% {
+        background-color: #00000000
+    }
+
+    30% {
+        width: 120vw;
+        max-width: 120vw;
+        transform: translate(calc(-50vw), -1vh);
+        /* background-color: #000000; */
+    }
+
+    40% {
+        width: 120vw;
+        max-width: 120vw;
+        transform: translate(calc(-50vw), -450vh);
+    }
+
+    100% {
+        width: 120vw;
+        max-width: 120vw;
+        transform: translate(-50vw, -450vh);
+    }
 }
 
 
 /* ANIMATION BACKGROUND-CHANGE */
 @keyframes dark-background {
-    5% {
+    30% {
         opacity: 0;
     }
 
-    10% {
+    31% {
         opacity: 1;
     }
 
