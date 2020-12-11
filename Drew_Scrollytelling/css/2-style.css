@@ -12,35 +12,10 @@ body.part2 {
     transform: scale(4);
     bottom: 40vh;
     transform-origin: center;
-    /* filter: drop-shadow(10px 10px 0 black); */
     animation: cloud-brain 2s ease-in calc(var(--scroll) * -2s) paused;
 }
 
-@keyframes cloud-brain {
-    0% {
-        transform: scale(4);
-        transform-origin: center;
-    }
-
-    50% {
-        transform: scale(4);
-        transform-origin: center;
-        bottom: 40vh;
-    }
-
-    60% {
-        transform: scale(0);
-        transform-origin: bottom;
-        bottom: 50vh;
-    }
-
-    100% {
-        transform: scale(0);
-        transform-origin: bottom;
-    }
-}
-
-
+/* BRAINSTORMING TEXT*/
 h1 {
     position: fixed;
     top: 42vh;
@@ -50,25 +25,7 @@ h1 {
     animation: text-move 2s ease-in calc(var(--scroll) * -2s) paused;
 }
 
-@keyframes text-move {
-
-    0% {
-        left: -150vw;
-    }
-
-    35% {
-        left: 150vw;
-    }
-
-    100% {
-        left: 150vw;
-    }
-}
-
-
-/* ICONS GEAR / LIGHT*/
-
-
+/* GEARS*/
 .white-gear1 {
     position: fixed;
     width: 100px;
@@ -77,29 +34,6 @@ h1 {
     /* width: 10vw; */
     transform: scale(0);
     animation: white-gear1-animation 2s linear calc(var(--scroll) * -2s) paused;
-}
-
-@keyframes white-gear1-animation {
-
-    0% {
-        transform: scale(0) rotate(0deg);
-    }
-
-    10% {
-        transform: scale(1) rotate(90deg);
-    }
-
-    20% {
-        transform: scale(1) rotate(180deg);
-    }
-
-    30% {
-        transform: scale(1) rotate(270deg);
-    }
-
-    40% {
-        transform: scale(0) rotate(360deg);
-    }
 }
 
 .white-gear2 {
@@ -111,28 +45,6 @@ h1 {
     animation: white-gear2-animation 2s linear calc(var(--scroll) * -2s) paused;
 }
 
-@keyframes white-gear2-animation {
-
-    0% {
-        transform: scale(0) rotate(0deg);
-    }
-
-    10% {
-        transform: scale(1) rotate(-90deg);
-    }
-
-    20% {
-        transform: scale(1) rotate(-180deg);
-    }
-
-    30% {
-        transform: scale(1) rotate(-270deg);
-    }
-
-    40% {
-        transform: scale(0) rotate(-360deg);
-    }
-}
 
 .black-gear1 {
     position: fixed;
@@ -141,33 +53,6 @@ h1 {
     right: 10vw;
     transform: scale(0);
     animation: black-gear1-animation 2s linear calc(var(--scroll) * -2s) paused;
-}
-
-@keyframes black-gear1-animation {
-
-    0% {
-        transform: scale(0) rotate(0deg);
-    }
-
-    10% {
-        transform: scale(1) rotate(-180deg);
-    }
-
-    20% {
-        transform: scale(1) rotate(-360deg);
-    }
-
-    30% {
-        transform: scale(1) rotate(-540deg);
-    }
-
-    40% {
-        transform: scale(1) rotate(-720deg);
-    }
-
-    50% {
-        transform: scale(0) rotate(-900deg);
-    }
 }
 
 .black-gear2 {
@@ -179,73 +64,15 @@ h1 {
     animation: black-gear2-animation 2s ease-in calc(var(--scroll) * -2s) paused;
 }
 
-@keyframes black-gear2-animation {
-    0% {
-        transform: scale(0) rotate(0deg);
-    }
-
-    10% {
-        transform: scale(1) rotate(180deg);
-    }
-
-    20% {
-        transform: scale(1) rotate(360deg);
-    }
-
-    30% {
-        transform: scale(1) rotate(540deg);
-    }
-
-    40% {
-        transform: scale(1) rotate(720deg);
-    }
-
-    50% {
-        transform: scale(0) rotate(900deg);
-    }
-}
-
+/* LIGHTBULB*/
 .lightbulb {
     position: fixed;
-    top: 20vh;
     width: 300px;
-    left: 10vw;
+    transform-origin: bottom;
+    transform: scale(0);
+    left: calc(50vw - 140px);
     animation: idea-animation 2s linear calc(var(--scroll) * -2s) paused;
 }
-
-@keyframes idea-animation {
-
-    0% {
-        transform: scale(0) rotate(-90deg);
-    }
-
-    40% {
-        transform: scale(0) rotate(-45deg);
-    }
-
-    45% {
-        transform: scale(2) rotate(-20deg);
-        bottom: 30vh;
-    }
-
-    50% {
-        transform: scale(2) rotate(20deg);
-        bottom: 50vh;
-    }
-
-    60% {
-        transform: scale(0) rotate(45deg);
-        bottom: 30vh;
-    }
-
-    100% {
-        transform: scale(0) rotate(45deg);
-    }
-
-
-}
-
-
 
 /* DREW */
 .faces.part2 {
@@ -315,5 +142,201 @@ h1 {
 
     100% {
         overflow: hidden;
+    }
+}
+
+
+
+/* ANIMATIONS*/
+
+
+/* ANIMATION CLOUD*/
+@keyframes cloud-brain {
+    0% {
+        transform: scale(4);
+        transform-origin: center;
+    }
+
+    50% {
+        transform: scale(4);
+        transform-origin: center;
+        bottom: 40vh;
+    }
+
+    60% {
+        transform: scale(0);
+        transform-origin: bottom;
+        bottom: 50vh;
+    }
+
+    100% {
+        transform: scale(0);
+        transform-origin: bottom;
+    }
+}
+
+
+/* ANIMATION BRAINSTORMING TEXT*/
+@keyframes text-move {
+
+    0% {
+        left: -150vw;
+    }
+
+    35% {
+        left: 150vw;
+    }
+
+    100% {
+        left: 150vw;
+    }
+}
+
+/* ANIMATION GEARS*/
+
+/* ANIMATION WHITE GEAR 1 */
+@keyframes white-gear1-animation {
+
+    0% {
+        transform: scale(0) rotate(0deg);
+    }
+
+    10% {
+        transform: scale(1) rotate(90deg);
+    }
+
+    20% {
+        transform: scale(1) rotate(180deg);
+    }
+
+    30% {
+        transform: scale(1) rotate(270deg);
+    }
+
+    40% {
+        transform: scale(0) rotate(360deg);
+    }
+}
+
+/* ANIMATION WHITE GEAR 2 */
+@keyframes white-gear2-animation {
+
+    0% {
+        transform: scale(0) rotate(0deg);
+    }
+
+    10% {
+        transform: scale(1) rotate(-90deg);
+    }
+
+    20% {
+        transform: scale(1) rotate(-180deg);
+    }
+
+    30% {
+        transform: scale(1) rotate(-270deg);
+    }
+
+    40% {
+        transform: scale(0) rotate(-360deg);
+    }
+}
+
+/* ANIMATION BLACK GEAR 1*/
+@keyframes black-gear1-animation {
+
+    0% {
+        transform: scale(0) rotate(0deg);
+    }
+
+    10% {
+        transform: scale(1) rotate(-180deg);
+    }
+
+    20% {
+        transform: scale(1) rotate(-360deg);
+    }
+
+    30% {
+        transform: scale(1) rotate(-540deg);
+    }
+
+    40% {
+        transform: scale(1) rotate(-720deg);
+    }
+
+    50% {
+        transform: scale(0) rotate(-900deg);
+    }
+}
+
+/* ANIMATION BLACK GEAR 2*/
+@keyframes black-gear2-animation {
+    0% {
+        transform: scale(0) rotate(0deg);
+    }
+
+    10% {
+        transform: scale(1) rotate(180deg);
+    }
+
+    20% {
+        transform: scale(1) rotate(360deg);
+    }
+
+    30% {
+        transform: scale(1) rotate(540deg);
+    }
+
+    40% {
+        transform: scale(1) rotate(720deg);
+    }
+
+    50% {
+        transform: scale(0) rotate(900deg);
+    }
+}
+
+
+/* ANIMATION LIGHT BULB*/
+
+@keyframes idea-animation {
+
+    0% {
+        transform: scale(0);
+        bottom: -50vh;
+    }
+
+    40% {
+        transform: scale(0);
+        bottom: -50vh;
+    }
+
+    45% {
+        transform: scale(2);
+        bottom: 0vh;
+        transform-origin: center;
+    }
+
+    50% {
+        transform: scale(2);
+        bottom: 50vh;
+        transform-origin: center;
+    }
+
+    58% {
+        transform: scale(0.5);
+        bottom: 50vh;
+        transform-origin: center;
+    }
+
+    60% {
+        transform: scale(0);
+        bottom: 50vh;
+        transform-origin: bottom;
+    }
+
+    100% {
+        transform: scale(0);
     }
 }
