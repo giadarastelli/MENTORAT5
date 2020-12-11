@@ -3,36 +3,250 @@ body.part2 {
     height: 1000vh;
     animation: stop-scroll 2s calc(var(--scroll) * -2s) ease-in-out paused;
 }
+
 /* CLOUD*/
 .cloud {
     position: fixed;
     width: 100vw;
-    bottom: 35vh;
-    transform: scale(1);
-    transform-origin: bottom;
-    filter: drop-shadow(10px 10px 0 black);
+    left: 3vw;
+    transform: scale(4);
+    bottom: 40vh;
+    transform-origin: center;
+    /* filter: drop-shadow(10px 10px 0 black); */
     animation: cloud-brain 2s ease-in calc(var(--scroll) * -2s) paused;
 }
+
 @keyframes cloud-brain {
     0% {
-        transform: translate(0, 0) scale(1);
-        filter: drop-shadow(10px 10px 0 black);
+        transform: scale(4);
+        transform-origin: center;
     }
+
     50% {
-        transform: translate(0, 0) scale(0);
-        filter: drop-shadow(10px 10px 0 black);
+        transform: scale(4);
+        transform-origin: center;
+        bottom: 40vh;
     }
+
+    60% {
+        transform: scale(0);
+        transform-origin: bottom;
+        bottom: 50vh;
+    }
+
     100% {
         transform: scale(0);
+        transform-origin: bottom;
     }
 }
-/* ICONS GEAR / LIGHT*/
-.icons.brainstorming {
+
+
+h1 {
     position: fixed;
-    height: 10vh;
-    bottom: 0;
-    transform: scale(0.2);
+    top: 42vh;
+    left: -150vw;
+    width: 10vw;
+    font-size: 5rem;
+    animation: text-move 2s ease-in calc(var(--scroll) * -2s) paused;
 }
+
+@keyframes text-move {
+
+    0% {
+        left: -150vw;
+    }
+
+    35% {
+        left: 150vw;
+    }
+
+    100% {
+        left: 150vw;
+    }
+}
+
+
+/* ICONS GEAR / LIGHT*/
+
+
+.white-gear1 {
+    position: fixed;
+    width: 100px;
+    top: 10vh;
+    left: 10vw;
+    /* width: 10vw; */
+    transform: scale(0);
+    animation: white-gear1-animation 2s linear calc(var(--scroll) * -2s) paused;
+}
+
+@keyframes white-gear1-animation {
+
+    0% {
+        transform: scale(0) rotate(0deg);
+    }
+
+    10% {
+        transform: scale(1) rotate(90deg);
+    }
+
+    20% {
+        transform: scale(1) rotate(180deg);
+    }
+
+    30% {
+        transform: scale(1) rotate(270deg);
+    }
+
+    40% {
+        transform: scale(0) rotate(360deg);
+    }
+}
+
+.white-gear2 {
+    position: fixed;
+    width: 200px;
+    bottom: 10vh;
+    right: 10vw;
+    transform: scale(0);
+    animation: white-gear2-animation 2s linear calc(var(--scroll) * -2s) paused;
+}
+
+@keyframes white-gear2-animation {
+
+    0% {
+        transform: scale(0) rotate(0deg);
+    }
+
+    10% {
+        transform: scale(1) rotate(-90deg);
+    }
+
+    20% {
+        transform: scale(1) rotate(-180deg);
+    }
+
+    30% {
+        transform: scale(1) rotate(-270deg);
+    }
+
+    40% {
+        transform: scale(0) rotate(-360deg);
+    }
+}
+
+.black-gear1 {
+    position: fixed;
+    width: 175px;
+    top: 20vh;
+    right: 10vw;
+    transform: scale(0);
+    animation: black-gear1-animation 2s linear calc(var(--scroll) * -2s) paused;
+}
+
+@keyframes black-gear1-animation {
+
+    0% {
+        transform: scale(0) rotate(0deg);
+    }
+
+    10% {
+        transform: scale(1) rotate(-180deg);
+    }
+
+    20% {
+        transform: scale(1) rotate(-360deg);
+    }
+
+    30% {
+        transform: scale(1) rotate(-540deg);
+    }
+
+    40% {
+        transform: scale(1) rotate(-720deg);
+    }
+
+    50% {
+        transform: scale(0) rotate(-900deg);
+    }
+}
+
+.black-gear2 {
+    position: fixed;
+    width: 125px;
+    bottom: 32vh;
+    left: 10vw;
+    transform: scale(0);
+    animation: black-gear2-animation 2s ease-in calc(var(--scroll) * -2s) paused;
+}
+
+@keyframes black-gear2-animation {
+    0% {
+        transform: scale(0) rotate(0deg);
+    }
+
+    10% {
+        transform: scale(1) rotate(180deg);
+    }
+
+    20% {
+        transform: scale(1) rotate(360deg);
+    }
+
+    30% {
+        transform: scale(1) rotate(540deg);
+    }
+
+    40% {
+        transform: scale(1) rotate(720deg);
+    }
+
+    50% {
+        transform: scale(0) rotate(900deg);
+    }
+}
+
+.lightbulb {
+    position: fixed;
+    top: 20vh;
+    width: 300px;
+    left: 10vw;
+    animation: idea-animation 2s linear calc(var(--scroll) * -2s) paused;
+}
+
+@keyframes idea-animation {
+
+    0% {
+        transform: scale(0) rotate(-90deg);
+    }
+
+    40% {
+        transform: scale(0) rotate(-45deg);
+    }
+
+    45% {
+        transform: scale(2) rotate(-20deg);
+        bottom: 30vh;
+    }
+
+    50% {
+        transform: scale(2) rotate(20deg);
+        bottom: 50vh;
+    }
+
+    60% {
+        transform: scale(0) rotate(45deg);
+        bottom: 30vh;
+    }
+
+    100% {
+        transform: scale(0) rotate(45deg);
+    }
+
+
+}
+
+
+
 /* DREW */
 .faces.part2 {
     position: fixed;
@@ -42,8 +256,9 @@ body.part2 {
     width: 73px;
     transform-origin: bottom;
     transform: translate(0, 30vh) scale(2);
-    animation: drew-story2 2s ease-in-out calc(var(--scroll) * -2s) paused;
+    animation: drew-story2 2s linear calc(var(--scroll) * -2s) paused;
 }
+
 /* VIDEO CALL BUTTON */
 .button-video {
     position: fixed;
@@ -53,37 +268,51 @@ body.part2 {
     transform: scale(0);
     animation: video-button 2s calc(var(--scroll) * -2s) ease-in-out paused;
 }
+
 /* ANIMATION DREW */
 @keyframes drew-story2 {
-    0% {}
-    10% {}
-    20% {}
-    50% {
-        transform: translate(0, 0) scale(1);
+    0% {
+        transform: translate(0, 30vh) scale(2);
     }
+
+    10% {}
+
+    20% {}
+
+    50% {}
+
     60% {}
+
     70% {}
+
     80% {}
+
     90% {}
+
     100% {}
 }
+
 /* ANIMATION VIDEO-BUTTON */
 @keyframes video-button {
     92% {
         transform: scale(0);
     }
+
     95% {
         transform: scale(1);
     }
+
     100% {
         transform: scale(1);
     }
 }
+
 /* KANN MAN DEAKTIVIEREN, FALLS NERVT (ABER OHNE STOP-SCROLL IST ANIMATION BEI 100% NICHT MEHR SICHTBAR) */
 @keyframes stop-scroll {
     95% {
         overflow: auto;
     }
+
     100% {
         overflow: hidden;
     }

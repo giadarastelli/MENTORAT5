@@ -76,7 +76,7 @@ var updateProgress = function () {
       surprisedFace.style.opacity = 0;
     }
 
-    //FACE 2 (THINKING)
+    //FACE 3 (THINKING)
     if (percentage >= 86 && percentage < 99) {
       thinkingFace.style.opacity = 1;
     } else {
@@ -134,7 +134,7 @@ var updateProgress = function () {
       phrase7.style.display = "none";
     }
 
-// TRIGGER EMAIL!!
+    // TRIGGER EMAIL!!
     let dataset = document.querySelector(".email").className
     if (percentage >= 85 && dataset === "email trigger1" && percentage <= 87) {
       document.querySelector(".email").classList.remove("trigger1");

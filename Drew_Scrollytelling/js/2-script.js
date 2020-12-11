@@ -22,8 +22,6 @@ var deadFace = document.querySelector(".drew-dead");
 var phrase1 = document.querySelector("#phrase1");
 var phrase2 = document.querySelector("#phrase2");
 var phrase3 = document.querySelector("#phrase3");
-var phrase4 = document.querySelector("#phrase4");
-var phrase5 = document.querySelector("#phrase5");
 
 //SET DREW FACES INVISIBLE
 happyFace.style.opacity = 0;
@@ -42,8 +40,7 @@ deadFace.style.opacity = 0;
 phrase1.style.display = "none";
 phrase2.style.display = "none";
 phrase3.style.display = "none";
-phrase4.style.display = "none";
-phrase5.style.display = "none";
+
 
 
 
@@ -62,17 +59,41 @@ var updateProgress = function () {
   let search = document.querySelectorAll(".part2");
   search.forEach(function () {
 
-    //TEXT 1 UND IDEA-FACE DREW
-    if (percentage >= 0 && percentage < 90) {
-      phrase1.style.display = "block";
-      happyFace.style.opacity = 1;
-    } 
+    // //TEXT 1 UND IDEA-FACE DREW
+    // if (percentage >= 50 && percentage < 90) {
+    //   phrase1.style.display = "block";
+    //   happyFace.style.opacity = 1;
+    // }
 
-    if (percentage >= 0 && percentage < 90) {
-    // !!!! INSERT STORY CONTENT HERE !!!!!
+    // if (percentage >= 0 && percentage < 90) {
+    //   // !!!! INSERT STORY CONTENT HERE !!!!!
+    // }
+
+    //FACE 1 (THINKING)
+    if (percentage >= 40 && percentage < 60) {
+      thinkingFace.style.opacity = 1;
+    } else {
+      thinkingFace.style.opacity = 0;
+    }
+
+    //FACE 2 (IDEA FACE)
+    if (percentage >= 60 && percentage < 99) {
+      ideaFace.style.opacity = 1;
+    } else {
+      ideaFace.style.opacity = 0;
     }
 
   })
+
+
+  // TEXT START 2
+  //TEXT 1 (MANY IDEAS)
+  if (percentage >= 60 && percentage < 90) {
+    phrase1.style.display = "block";
+  } else {
+    phrase1.style.display = "none";
+  }
+
 }
 updateProgress();
 $(window).scroll(updateProgress);
@@ -93,16 +114,6 @@ new TypeIt("#phrase2", {
 }).go();
 
 new TypeIt("#phrase3", {
-  speed: 50,
-  waitUntilVisible: true,
-}).go();
-
-new TypeIt("#phrase4", {
-  speed: 50,
-  waitUntilVisible: true,
-}).go();
-
-new TypeIt("#phrase5", {
   speed: 50,
   waitUntilVisible: true,
 }).go();
