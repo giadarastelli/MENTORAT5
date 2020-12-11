@@ -210,11 +210,9 @@ body.part1 {
 @keyframes ideazoom {
   86% {
     transform: scale(0);
-    filter: drop-shadow(10px 10px 0px black);
   }
 
   93% {
     transform: scale(3);
-    filter: drop-shadow(10px 10px 0 black);
   }
 }

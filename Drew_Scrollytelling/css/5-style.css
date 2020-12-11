@@ -27,7 +27,7 @@ body.part5 {
 .scribble-svg {
     position: fixed;
     height: 300vh;
-    top: -100vh;
+    top: -150vh;
     left: -100vw;
     width: 300vw;
 }
@@ -221,6 +221,10 @@ body.part5 {
     left: calc(25vw - 60px);
     top: 140px;
     width: 120px;
+}
+
+.front{
+    z-index: 20;
 }
 
 /* ANIMATION SCRIBBLE */
