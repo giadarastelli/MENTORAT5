@@ -17,10 +17,14 @@ var onFireFace = document.querySelector(".drew-on-fire");
 var exhaustedFace = document.querySelector(".drew-exhausted");
 var relievedFace = document.querySelector(".drew-relieved");
 var deadFace = document.querySelector(".drew-dead");
+var drewArms = document.querySelector(".drew-arms");
 
 //GET STORY TEXTS
 var phrase1 = document.querySelector("#phrase1");
 var phrase2 = document.querySelector("#phrase2");
+var phrase3 = document.querySelector("#phrase3");
+var phrase4 = document.querySelector("#phrase4");
+var phrase5 = document.querySelector("#phrase5");
 
 //SET DREW FACES INVISIBLE
 happyFace.style.opacity = 0;
@@ -34,10 +38,14 @@ onFireFace.style.opacity = 0;
 exhaustedFace.style.opacity = 0;
 relievedFace.style.opacity = 0;
 deadFace.style.opacity = 0;
+drewArms.style.opacity = 0;
 
 //SET STORY TEXTS INVISIBLE
 phrase1.style.display = "none";
 phrase2.style.display = "none";
+phrase3.style.display = "none";
+phrase4.style.display = "none";
+phrase5.style.display = "none";
 
 
 
@@ -54,31 +62,67 @@ var updateProgress = function () {
   search.forEach(function () {
 
     // FACE 1 (ON FIRE FACE)
-    if (percentage >= 31 && percentage < 40) {
+    if (percentage >= 25 && percentage < 35) {
       onFireFace.style.opacity = 1;
+      drewArms.style.opacity = 1;
+    } else {
+      onFireFace.style.opacity = 0;
+      drewArms.style.opacity = 0;
+    }
+
+    // ARMS OF DREW
+    if (percentage >= 25 && percentage < 40) {
+      drewArms.style.opacity = 1;
     } else {
       onFireFace.style.opacity = 0;
     }
 
     // FACE 2 (EXHAUSTED FACE)
-    if (percentage >= 40 && percentage < 50) {
+    if (percentage >= 35 && percentage < 40) {
       exhaustedFace.style.opacity = 1;
     } else {
       exhaustedFace.style.opacity = 0;
     }
 
     // TEXT 1 (UFF I AM FINALLY DONW)
-    if (percentage >= 40 && percentage < 50) {
+    if (percentage >= 35 && percentage < 40) {
       phrase1.style.display = "block";
     } else {
       phrase1.style.display = "none";
     }
 
     // FACE 3 (RELIEFED FACE)
-    if (percentage >= 50 && percentage < 80) {
+    if (percentage >= 40 && percentage < 80) {
       relievedFace.style.opacity = 1;
     } else {
       relievedFace.style.opacity = 0;
+    }
+
+    // TRIGGER EMAIL BOSSBITCH (DREW DID GOOD WORK)
+    let dataset = document.querySelector(".email").className
+    if (percentage >= 40 && dataset === "email trigger1" && percentage <= 45) {
+      document.querySelector(".email").classList.remove("trigger1");
+      show_email1();
+    } 
+
+    // TEXT 2
+    if (percentage >= 45 && percentage < 50) {
+      phrase2.style.display = "block";
+    } else {
+      phrase2.style.display = "none";
+    }
+    // TEXT 3
+    if (percentage >= 50 && percentage < 60) {
+      phrase3.style.display = "block";
+    } else {
+      phrase3.style.display = "none";
+    }
+
+    // TEXT 4
+    if (percentage >= 60 && percentage < 80) {
+      phrase4.style.display = "block";
+    } else {
+      phrase4.style.display = "none";
     }
 
     // FACE 4 (DEAD FACE)
@@ -88,23 +132,22 @@ var updateProgress = function () {
       deadFace.style.opacity = 0;
     }
 
-    // TEXT 2 (noooOOOOOO.)
+    // (noooOOOOOO.)
     if (percentage >= 80 && percentage < 99) {
-      phrase2.style.display = "block";
+      phrase5.style.display = "block";
     } else {
-      phrase2.style.display = "none";
+      phrase5.style.display = "none";
     }
 
-    // JASON DE RULER
-    if (percentage >= 80 && percentage < 99) {
-      phrase2.style.display = "block";
-    } else {
-      phrase2.style.display = "none";
-    }
-
-    // TRIGGER EMAIL
-    if (percentage >= 85 && percentage <= 87) {
-      show_email1();
+    // TRIGGER EMAIL JASON DE RULER
+    let dataset2 = document.querySelector(".email2").className
+    if (percentage >= 82 && dataset2 === "email2 trigger2" && percentage <= 87) {
+      document.querySelector(".email2").classList.remove("trigger2");
+      show_email2();
+      show_email3();
+      show_email2();
+      show_email3();
+      show_email2();
     }
 
   })
@@ -115,35 +158,38 @@ $(window).scroll(updateProgress);
 
 
 // NOTIFICATION SCRIPTS - FOR THE TOAST NOTIFICATION
-
-// FIRST NOTIFICATION CONTENT
+// MAIL OF BOSSBITCH (THANKING FOR COLLOBORATION)
 function show_email1() {
-  console.log('works')
-  // disableScroll();
+  disableScroll();
   toast.create({
-    title: 'From: Jason de Ruler',
-    text: '----------------------------<br> Hi Drew,<br> I have a new task for you, design a logo.<br><br> Cheers,<br> Mr. B',
+    title: 'From: Mr. Bosstitch',
+    text: '----------------------------<br>thanks for working with me. you did a great job.<br><br> Cheers,<br> Mr. Bosstitch.',
     icon: "img/button-mail.png",
     callback: function () {
-      // enableScroll();
-      // SecondPart();
+      enableScroll();
     }
   });
 };
 
-// SECOND NOTIFICATION CONTENT
+// FIRST SPAM MAIL (JASON DE RULER)
 function show_email2() {
-  console.log('works')
-  disableScroll();
   toast.create({
-    title: 'From: Mr Bosstitch <br> Subject: i forgot...',
-    text: '----------------------------<br> Hi Drew,<br>please finish the project by the end of the week.<br><br> Cheers,<br> Mr. B',
+    title: 'From: Jason de Ruler',
+    text: '----------------------------<br>Can you design my album cover?<br> Cheers,<br> J. De Ruler',
     icon: "img/button-mail.png",
     callback: function () {
-      enableScroll();
-      // SecondPart();
     }
+  });
+};
 
+// SECOND SPAM MAIL (MC ERASER)
+function show_email3() {
+  toast.create({
+    title: 'From: Mc Eraser',
+    text: '----------------------------<br>Hi DREW, i need you.<br> Mc Eraser',
+    icon: "img/button-mail.png",
+    callback: function () {
+    }
   });
 };
 
@@ -162,17 +208,6 @@ function disableScroll() {
 function enableScroll() {
   window.onscroll = function () {};
 }
-
-function SecondPart() {
-  window.location.replace("part2.html");
-  reload();
-}
-
-function FifthPart() {
-  window.location.replace("part5.html");
-  reload();
-}
-
 
 
 //TYPE-IT TEXT ANIMATIONS
@@ -186,65 +221,20 @@ new TypeIt("#phrase2", {
   waitUntilVisible: true
 }).go();
 
+new TypeIt("#phrase3", {
+  speed: 50,
+  waitUntilVisible: true
+}).go();
 
+new TypeIt("#phrase4", {
+  speed: 50,
+  waitUntilVisible: true
+}).go();
 
-
-
-
-// NOTIFICATION SCRIPTS - FOR THE TOAST NOTIFICATION
-
-// FIRST NOTIFICATION CONTENT
-function show_email1() {
-  console.log('works')
-  disableScroll();
-  toast.create({
-    title: 'From: Mr Bosstitch <br> Subject: New Project',
-    text: '----------------------------<br> Hi Drew,<br> I have a new task for you, design a logo.<br><br> Cheers,<br> Mr. B',
-    icon: "img/button-mail.png",
-    callback: function () {
-      enableScroll();
-      // SecondPart();
-    }
-  });
-};
-
-// SECOND NOTIFICATION CONTENT
-function show_email2() {
-  console.log('works')
-  disableScroll();
-  toast.create({
-    title: 'From: Mr Bosstitch <br> Subject: i forgot...',
-    text: '----------------------------<br> Hi Drew,<br>please finish the project by the end of the week.<br><br> Cheers,<br> Mr. B',
-    icon: "img/button-mail.png",
-    callback: function () {
-      enableScroll();
-      SecondPart();
-    }
-
-  });
-};
-
-
-function disableScroll() {
-  // Get the current page scroll position
-  scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-
-    // if any scroll is attempted, set this to the previous value
-    window.onscroll = function () {
-      window.scrollTo(scrollLeft, scrollTop);
-    };
-}
-
-function enableScroll() {
-  window.onscroll = function () {};
-}
-
-function SecondPart() {
-  window.location.replace("part2.html");
-  reload();
-}
-
+new TypeIt("#phrase5", {
+  speed: 50,
+  waitUntilVisible: true
+}).go();
 
 
 // TOAST SCRIPT

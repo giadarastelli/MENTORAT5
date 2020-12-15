@@ -17,6 +17,7 @@ body.part5 {
 .svg-container {
     width: 100%;
     background-color: black;
+    overflow: hidden;
     position: fixed;
     top: -10px;
     height: 100%;
@@ -25,7 +26,7 @@ body.part5 {
 
 /* FIRST SCRIBBLE SVG */
 .scribble-svg {
-    position: fixed;
+    position: absolute;
     height: 300vh;
     top: -150vh;
     left: -100vw;
@@ -34,7 +35,6 @@ body.part5 {
 
 /* SECOND SCRIBBLE SVG */
 .scribble-svg.wide {
-    position: fixed;
     height: 300vh;
     top: -100vh;
     left: -100vw;
@@ -70,6 +70,7 @@ body.part5 {
     width: 60vw;
     max-width: 180px;
     left: calc(50vw - 150px);
+    animation: flaminghot-right 2s calc(var(--scroll) * -2s) ease-in-out paused;
 }
 
 /* FIRE (SMALL LEFT) */
@@ -91,19 +92,11 @@ body.part5 {
 /* COUNTDOWN DAYS POSITION */
 .count {
     position: fixed;
-    width: 33vw;
-    max-width: 200px;
-    top: -100px;
+    width:200px;
     left: calc(50vw - 100px);
-    padding-top: 50vh;
+    top: calc(50vh - 100px);
 }
 
-/* COUNTDOWN DAYS STAY IN MIDDLE ON SMALLER SCREENS */
-@media screen and (max-width:768px) {
-    .count {
-        left: calc(50vw - 16.5vw);
-    }
-}
 
 /* SEPERATE DAYS OF COUNTDOWN */
 .day10 {
@@ -162,6 +155,10 @@ body.part5 {
     animation: drew-story5 2s ease-in-out calc(var(--scroll) * -2s) paused;
 }
 
+.drew-arms{
+    left:-12.5vh;
+}
+
 /* FURNITURE */
 .furniture {
     position: fixed;
@@ -184,7 +181,6 @@ body.part5 {
 .desk {
     left: calc(50vw - 30vh);
     opacity: 0;
-    /* z-index: 10; */
     animation: desk 2s ease-in-out calc(var(--scroll) * -2s) paused;
 }
 
@@ -226,7 +222,7 @@ body.part5 {
 }
 
 .front {
-    z-index: 20;
+    z-index: 10;
 }
 
 /* ANIMATION SCRIBBLE */
@@ -252,35 +248,42 @@ body.part5 {
         transform: scale(0);
     }
 
-    10% {
+    27% {
         transform: scale(1);
     }
 
-    17% {
-        transform: scale(1.1);
+    30% {
+        transform: translate(100vw,0) scale(2);
     }
+}
 
-    25% {
-        transform: scale(1);
-    }
-
-    28% {
+@keyframes flaminghot-right {
+    5% {
         transform: scale(0);
+    }
+
+
+    27% {
+        transform: scale(1);
+    }
+
+    30% {
+        transform: translate(-100vw,0) scale(2);
     }
 }
 
 /* ANIMATION SCRIBBLE SACHEN NACH OBEN SCHIEBEN */
 @keyframes pushup {
     30% {
-        transform: translate(0, 0);
+        top: -10px;
     }
 
-    40% {
-        transform: translate(0, -450vh);
+    35% {
+        top: calc(-150vh - 10px);
     }
 
     100% {
-        transform: translate(0, -450vh);
+        top: calc(-150vh - 10px);
     }
 }
 
@@ -297,21 +300,23 @@ body.part5 {
         opacity: 0;
     }
 
-    31% {
-        transform: translate(3vw, -20vh) scale(0);
+    25% {
+        transform: translate(0, -20vh) scale(0);
         opacity: 1;
     }
 
-    35% {
+    30% {
         transform: translate(0, -20vh) scale(1);
 
     }
 
     80% {
+        z-index: 0;
         transform: translate(0, -20vh) scale(1);
     }
 
     84% {
+        z-index: 10;
         transform: translate(0, 30vh) scale(2);
     }
 
@@ -567,33 +572,26 @@ body.part5 {
 
 /* ANIMATION DAY-0 */
 @keyframes day0 {
-    27% {
-        width: 33vw;
-        max-width: 200px;
-        transform: translate(0, 0);
+    28% {
+        width:200px;
+        left: calc(50vw - 100px);
+        top: calc(50vh - 100px);
     }
-
-    29% {
-        background-color: #00000000
-    }
-
     30% {
-        width: 120vw;
-        max-width: 120vw;
-        transform: translate(calc(-50vw), -1vh);
-        /* background-color: #000000; */
+        width:120vw;
+        left: -10vw;
+        top: calc(100vh - 134vw);
     }
 
-    40% {
-        width: 120vw;
-        max-width: 120vw;
-        transform: translate(calc(-50vw), -450vh);
+    35% {
+        top: calc(100vh - 134vw - 150vh);
     }
 
     100% {
-        width: 120vw;
-        max-width: 120vw;
-        transform: translate(-50vw, -450vh);
+        width:120vw;
+        left: -10vw;
+        top: calc(100vh - 134vw - 150vh);
+
     }
 }
 
