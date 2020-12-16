@@ -8,7 +8,11 @@ function setup() {
 
 }
 
-function mouseClicked() {
+// function mouseClicked() {
+//     song.play();
+// }
+
+function touchStarted() {
     song.play();
 }
 
