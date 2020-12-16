@@ -7,9 +7,27 @@ body {
   background: white;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+
 @media screen and (max-width:768px) {
   body {
     font-size: 2rem;
+  }
+}
+
+.story-text-container {
+  opacity: 0;
+  animation: text-refresh 1s ease-in calc(var(--scroll) * -2s) paused;
+}
+@keyframes text-refresh {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
   }
 }
 

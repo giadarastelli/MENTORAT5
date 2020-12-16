@@ -4,6 +4,7 @@
 body.part5 {
     height: 1000vh;
     background-color: black;
+    font-family: 'Do Hyeon', sans-serif;
     animation: stop-scroll 2s calc(var(--scroll) * -2s) ease-in-out paused;
 }
 
