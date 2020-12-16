@@ -79,6 +79,12 @@ body {
   background-color: none;
 }
 
+.bosstitch-wiggle{
+  position: fixed;
+  transform-origin: bottom center;
+  animation: wiggle-effect 2s ease-in-out infinite;
+}
+
 /* ANIMATION DREW WIGGLE */
 @keyframes wiggle-effect {
   0% {

@@ -1,7 +1,39 @@
 /* PART 3 STYLING: VIDEO CALL */
+@import url('https://fonts.googleapis.com/css2?family=Dokdo&display=swap');
 
 /* PART 3 BODY */
-body.part3{
-    background-color: black;
-    color: white;
-  }
+body.part3 {
+  background-color: black;
+  color: white;
+  font-family: 'Dokdo', cursive;
+  height: 500vh;
+}
+
+.up {
+  background-color: white;
+}
+
+.bosstitch {
+  position: fixed;
+  top: 20vh;
+  width: 80vw;
+  height: auto;
+}
+
+.leave-button {
+  position: fixed;
+  width: 200px;
+  bottom: 0;
+  right: 0;
+}
+
+.join-box{
+  background-color: red;
+  opacity: 0.5;
+  text-align: center;
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
