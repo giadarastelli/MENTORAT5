@@ -2,7 +2,8 @@
 
 /* PART 4 BODY */
 body.part4 {
-    height: 1000vh;
+    /* height: 1000vh; */
+    height: 500vh;
     animation: stop-scroll 2s calc(var(--scroll) * -2s) ease-in-out paused;
 }
 
@@ -19,7 +20,7 @@ body.part4 {
 }
 
 /*DREW CHANGING TO BLACK*/
-.drew-nervous-black{
+.drew-nervous-black {
     position: fixed;
     bottom: 20vh;
     left: calc(50vw - 73px);
@@ -32,32 +33,85 @@ body.part4 {
 
 @keyframes drew-story4 {
     0% {}
-    10% {}
-    20% {}
-    21% {z-index: 0; transform: scale(1) translate(0,0);}
-    22% {z-index: 1;}
-    25% {transform: scale(2) translate(0, 30vh);opacity: 1;left: calc(50vw - 73px);}
-    30% {opacity: 1;}
-    35% {opacity: 0; }
-    60% {transform: scale(30) translate(0, 30vh); left:-50vh;}
+
+    20% {
+        transform: scale(1) translate(0, 0);
+
+    }
+
+    30% {
+        transform: scale(1) translate(0, 0);
+        z-index: 0;
+    }
+
+    31% {
+        z-index: 1;
+    }
+
+    35% {
+        z-index: 1;
+        transform: scale(2) translate(0, 30vh);
+        opacity: 1;
+        left: calc(50vw - 73px);
+
+    }
+
+    75% {
+        z-index: 1;
+        transform: scale(30) translate(0, 30vh);
+        left: -50vh;
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(30) translate(0, 30vh);
+        left: -50vh;
+    }
 }
 
 @keyframes drew-story4-black {
-    0% {}
-    10% {}
-    20% {}
-    21% {z-index: 0; transform: scale(1) translate(0,0);}
-    22% {z-index: 1;}
-    25% {transform: scale(2) translate(0, 30vh);opacity: 0; left: calc(50vw - 73px);}
-    28% {opacity: 0;}
-    30% {opacity: 1;}
-    35% {opacity: 1;}
-    60% {transform: scale(30) translate(0, 30vh); left:-50vh;}
-    90% {}
-    100% {}
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+
+        transform: scale(1) translate(0, 0);
+
+    }
+
+    30% {
+        transform: scale(1) translate(0, 0);
+        z-index: 0;
+    }
+
+    35% {
+        z-index: 1;
+        transform: scale(2) translate(0, 30vh);
+        left: calc(50vw - 73px);
+        opacity: 0;
+
+    }
+
+    45% {
+        opacity: 1;
+    }
+
+
+    75% {
+        z-index: 1;
+        transform: scale(30) translate(0, 30vh);
+        left: -50vh;
+    }
+
+    100% {
+        transform: scale(30) translate(0, 30vh);
+        left: -50vh;
+        opacity: 1;
+    }
 }
 
-.trash{
+.trash {
     position: fixed;
     bottom: 15vh;
     left: -35vh;
@@ -67,15 +121,17 @@ body.part4 {
 }
 
 @keyframes trash {
-    0% {}
-    10% {left: calc(50vw - 200px);}
-    20% {}
-    50% {}
-    60% {}
-    70% {}
-    80% {}
-    90% {}
-    100% {left: calc(50vw - 200px);}
+    0% {
+        left: calc(0vw - 200px);
+    }
+
+    18% {
+        left: calc(50vw - 200px);
+    }
+
+    100% {
+        left: calc(50vw - 200px);
+    }
 }
 
 /* MAIL BUTTON */

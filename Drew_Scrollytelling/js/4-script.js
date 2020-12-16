@@ -57,21 +57,21 @@ var updateProgress = function () {
   search.forEach(function () {
 
     //FACE 1 (SAD)
-    if (percentage >= 0 && percentage < 20) {
+    if (percentage >= 0 && percentage < 23) {
       sadFace.style.opacity = 1;
     } else {
       sadFace.style.opacity = 0;
     }
 
     //TEXT 1 (WELL....)
-    if (percentage >= 0 && percentage < 5) {
+    if (percentage >= 0 && percentage < 10) {
       phrase1.style.display = "block";
     } else {
       phrase1.style.display = "none";
     }
 
     //TEXT 2 (...THIS ASSHOLE DIDNT LIKE MY IDEAS.)
-    if (percentage >= 5 && percentage < 10) {
+    if (percentage >= 10 && percentage < 20) {
       phrase2.style.display = "block";
     } else {
       phrase2.style.display = "none";
@@ -79,34 +79,34 @@ var updateProgress = function () {
 
     // TRIGGER EMAIL!!
     let dataset = document.querySelector(".email").className
-    if (percentage >= 20 && dataset === "email trigger1" && percentage <= 22) {
+    if (percentage >= 24 && dataset === "email trigger1" && percentage <= 25) {
       document.querySelector(".email").classList.remove("trigger1");
       show_email2();
     }
 
     //FACE 2 (MORE SAD FACE)
-    if (percentage >= 20 && percentage < 23) {
+    if (percentage >= 23 && percentage < 26) {
       moreSadFace.style.opacity = 1;
     } else {
       moreSadFace.style.opacity = 0;
     }
 
     //FACE 2 (NERVOUS FACE)
-    if (percentage >= 23 && percentage < 99) {
+    if (percentage >= 26 && percentage < 99) {
       nervousFace.style.opacity = 1;
     } else {
       nervousFace.style.opacity = 0;
     }
 
     //FACE 2 (DREW CHANGING TO BLACK)
-    if (percentage >= 30 && percentage < 99) {
+    if (percentage >= 30 && percentage < 100) {
       nervousFaceBlack.style.opacity = 1;
     } else {
       nervousFaceBlack.style.opacity = 0;
     }
 
     //CHANGE TO LAST PART!!
-    if (percentage >= 50) {
+    if (percentage >= 90) {
       FifthPart();
     }
   })
