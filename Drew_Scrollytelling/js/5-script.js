@@ -64,14 +64,12 @@ var updateProgress = function () {
     // FACE 1 (ON FIRE FACE)
     if (percentage >= 25 && percentage < 35) {
       onFireFace.style.opacity = 1;
-      drewArms.style.opacity = 1;
     } else {
       onFireFace.style.opacity = 0;
-      drewArms.style.opacity = 0;
     }
 
     // ARMS OF DREW
-    if (percentage >= 25 && percentage < 40) {
+    if (percentage >= 25 && percentage < 100) {
       drewArms.style.opacity = 1;
     } else {
       onFireFace.style.opacity = 0;
@@ -103,7 +101,7 @@ var updateProgress = function () {
     if (percentage >= 40 && dataset === "email trigger1" && percentage <= 45) {
       document.querySelector(".email").classList.remove("trigger1");
       show_email1();
-    } 
+    }
 
     // TEXT 2
     if (percentage >= 45 && percentage < 50) {
@@ -177,8 +175,7 @@ function show_email2() {
     title: 'From: Jason de Ruler',
     text: '----------------------------<br>Can you design my album cover?<br> Cheers,<br> J. De Ruler',
     icon: "img/button-mail.png",
-    callback: function () {
-    }
+    callback: function () {}
   });
 };
 
@@ -188,8 +185,7 @@ function show_email3() {
     title: 'From: Mc Eraser',
     text: '----------------------------<br>Hi DREW, i need you.<br> Mc Eraser',
     icon: "img/button-mail.png",
-    callback: function () {
-    }
+    callback: function () {}
   });
 };
 

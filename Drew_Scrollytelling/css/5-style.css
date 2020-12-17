@@ -92,7 +92,7 @@ body.part5 {
 /* COUNTDOWN DAYS POSITION */
 .count {
     position: fixed;
-    width:200px;
+    width: 200px;
     left: calc(50vw - 100px);
     top: calc(50vh - 100px);
 }
@@ -155,8 +155,14 @@ body.part5 {
     animation: drew-story5 2s ease-in-out calc(var(--scroll) * -2s) paused;
 }
 
-.drew-arms{
-    left:-12.5vh;
+.drew-arms {
+    position: absolute;
+    left: -12.5vh;
+    width: 30vh;
+    height: 100%;
+    z-index: 20;
+    transform-origin: right;
+    animation: drew-arms 2s ease-in-out calc(var(--scroll) * -2s) paused;
 }
 
 /* FURNITURE */
@@ -253,7 +259,7 @@ body.part5 {
     }
 
     30% {
-        transform: translate(100vw,0) scale(2);
+        transform: translate(100vw, 0) scale(2);
     }
 }
 
@@ -262,13 +268,12 @@ body.part5 {
         transform: scale(0);
     }
 
-
     27% {
         transform: scale(1);
     }
 
     30% {
-        transform: translate(-100vw,0) scale(2);
+        transform: translate(-100vw, 0) scale(2);
     }
 }
 
@@ -322,6 +327,35 @@ body.part5 {
 
     100% {
         transform: translate(0, 30vh) scale(2);
+    }
+}
+
+/* ANIMATION FURNITURE DESK */
+@keyframes drew-arms {
+    0% {
+        transform: rotate(0);
+    }
+
+    40% {
+        transform: rotate(0) scale(1);
+        z-index: 20;
+    }
+
+    45% {
+        transform: rotate(-10deg) scale(1);
+        z-index: 20;
+    }
+
+    46% {
+        z-index: 0;
+    }
+
+    50% {
+        transform: rotate(-10deg) scale(0);
+    }
+
+    100% {
+        transform: rotate(-10deg) scale(0);
     }
 }
 
@@ -573,12 +607,13 @@ body.part5 {
 /* ANIMATION DAY-0 */
 @keyframes day0 {
     28% {
-        width:200px;
+        width: 200px;
         left: calc(50vw - 100px);
         top: calc(50vh - 100px);
     }
+
     30% {
-        width:120vw;
+        width: 120vw;
         left: -10vw;
         top: calc(100vh - 134vw);
     }
@@ -588,7 +623,7 @@ body.part5 {
     }
 
     100% {
-        width:120vw;
+        width: 120vw;
         left: -10vw;
         top: calc(100vh - 134vw - 150vh);
 
