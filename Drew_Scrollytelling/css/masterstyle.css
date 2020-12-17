@@ -19,13 +19,16 @@ body {
   opacity: 0;
   animation: text-refresh 1s ease-in calc(var(--scroll) * -2s) paused;
 }
+
 @keyframes text-refresh {
   0% {
     opacity: 0;
   }
+
   5% {
     opacity: 1;
   }
+
   100% {
     opacity: 1;
   }
@@ -74,16 +77,10 @@ body {
   position: fixed;
   height: 50vh;
   transform-origin: bottom center;
-  background-color: none;
   animation: wiggle-effect 2s ease-in-out infinite;
-  background-color: none;
+
 }
 
-.bosstitch-wiggle{
-  position: fixed;
-  transform-origin: bottom center;
-  animation: wiggle-effect 2s ease-in-out infinite;
-}
 
 /* ANIMATION DREW WIGGLE */
 @keyframes wiggle-effect {
