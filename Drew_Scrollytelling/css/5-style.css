@@ -648,7 +648,7 @@ body.part5 {
 
 /* ANIMATION FADE OUT CIRCLE */
 @keyframes fade-out {
-    90% {
+    85% {
         transform: scale(0);
     }
 

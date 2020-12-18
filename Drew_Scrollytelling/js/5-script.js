@@ -101,6 +101,8 @@ var updateProgress = function () {
     if (percentage >= 40 && dataset === "email trigger1" && percentage <= 45) {
       document.querySelector(".email").classList.remove("trigger1");
       show_email1();
+      document.querySelector(".messagetone").currentTime = 0;
+      document.querySelector(".messagetone").play();
     }
 
     // TEXT 2
@@ -146,6 +148,41 @@ var updateProgress = function () {
       show_email2();
       show_email3();
       show_email2();
+
+      ///RINGTONE SPAM WITH SOUND DELAY
+      setTimeout(function () {
+        document.querySelector(".messagetone").currentTime = 0;
+        document.querySelector(".messagetone").play();
+      }, 0);
+      setTimeout(function () {
+        document.querySelector(".messagetone").currentTime = 0;
+        document.querySelector(".messagetone").play();
+      },50);
+      setTimeout(function () {
+        document.querySelector(".messagetone").currentTime = 0;
+        document.querySelector(".messagetone").play();
+      },100);
+      setTimeout(function () {
+        document.querySelector(".messagetone").currentTime = 0;
+        document.querySelector(".messagetone").play();
+      },150);
+      setTimeout(function () {
+        document.querySelector(".messagetone").currentTime = 0;
+        document.querySelector(".messagetone").play();
+      },200);
+      setTimeout(function () {
+        document.querySelector(".messagetone").currentTime = 0;
+        document.querySelector(".messagetone").play();
+      },300);
+      setTimeout(function () {
+        document.querySelector(".messagetone").currentTime = 0;
+        document.querySelector(".messagetone").play();
+      },500);
+      setTimeout(function () {
+        document.querySelector(".messagetone").currentTime = 0;
+        document.querySelector(".messagetone").play();
+      },700);
+
     }
 
   })

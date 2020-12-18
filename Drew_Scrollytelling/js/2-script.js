@@ -83,17 +83,38 @@ var updateProgress = function () {
       ideaFace.style.opacity = 0;
     }
 
+
+
+    // TEXT START 2
+    //TEXT 1 (MANY IDEAS)
+    if (percentage >= 60 && percentage < 70) {
+      phrase1.style.display = "block";
+    } else {
+      phrase1.style.display = "none";
+    }
+
+    //TEXT 2
+    if (percentage >= 70 && percentage < 80) {
+      phrase2.style.display = "block";
+    } else {
+      phrase2.style.display = "none";
+    }
+
+    //TEXT 3
+    if (percentage >= 94 && percentage < 100) {
+      phrase3.style.display = "block";
+    } else {
+      phrase3.style.display = "none";
+    }
+
+    // PHONECALL RINGTONE
+    if (percentage >= 95 && percentage < 99) {
+      document.querySelector(".ringtone").play().loop;
+    } else {
+      document.querySelector(".ringtone").pause();
+    }
+
   })
-
-
-  // TEXT START 2
-  //TEXT 1 (MANY IDEAS)
-  if (percentage >= 60 && percentage < 90) {
-    phrase1.style.display = "block";
-  } else {
-    phrase1.style.display = "none";
-  }
-
 }
 updateProgress();
 $(window).scroll(updateProgress);

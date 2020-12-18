@@ -107,7 +107,7 @@ var updateProgress = function () {
     }
 
     //TEXT 4
-    if (percentage >= 50 && percentage < 60) {
+    if (percentage > 50 && percentage < 60) {
       phrase4.style.display = "block";
     } else {
       phrase4.style.display = "none";
@@ -139,6 +139,8 @@ var updateProgress = function () {
     if (percentage >= 85 && dataset === "email trigger1" && percentage <= 87) {
       document.querySelector(".email").classList.remove("trigger1");
       show_email1();
+      document.querySelector(".messagetone").currentTime = 0;
+      document.querySelector(".messagetone").play();
     }
 
 

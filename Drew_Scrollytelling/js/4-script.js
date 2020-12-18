@@ -64,14 +64,14 @@ var updateProgress = function () {
     }
 
     //TEXT 1 (WELL....)
-    if (percentage >= 0 && percentage < 10) {
+    if (percentage >= 2 && percentage < 10) {
       phrase1.style.display = "block";
     } else {
       phrase1.style.display = "none";
     }
 
     //TEXT 2 (...THIS ASSHOLE DIDNT LIKE MY IDEAS.)
-    if (percentage >= 10 && percentage < 20) {
+    if (percentage >= 10 && percentage < 24) {
       phrase2.style.display = "block";
     } else {
       phrase2.style.display = "none";
@@ -82,6 +82,8 @@ var updateProgress = function () {
     if (percentage >= 24 && dataset === "email trigger1" && percentage <= 25) {
       document.querySelector(".email").classList.remove("trigger1");
       show_email2();
+      document.querySelector(".messagetone").currentTime = 0;
+      document.querySelector(".messagetone").play();
     }
 
     //FACE 2 (MORE SAD FACE)

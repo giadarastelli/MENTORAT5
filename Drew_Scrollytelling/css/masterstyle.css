@@ -1,13 +1,24 @@
 /* MASTER STYLING: FOR ALL HTMLS */
 
+/* IMPORT DREW FONT (Nanum Pen Script) */
+@font-face {
+  font-family: Nanum;
+  src: url(font-drew.ttf);
+}
+
+/* IMPORT BOSSBITCH FONT (DOKDO REGULAR) */
+@font-face {
+  font-family: Dokdo;
+  src: url(font-bosstitch.ttf);
+}
+
 /* MASTER BODY*/
 body {
-  font-family: 'Nanum Pen Script';
+  font-family: 'Nanum';
   font-size: 3rem;
   background: white;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
 
 @media screen and (max-width:768px) {
   body {
@@ -17,7 +28,7 @@ body {
 
 .story-text-container {
   opacity: 0;
-  animation: text-refresh 1s ease-in calc(var(--scroll) * -2s) paused;
+  animation: text-refresh 2s ease-in calc(var(--scroll) * -2s) paused;
 }
 
 @keyframes text-refresh {
@@ -25,7 +36,7 @@ body {
     opacity: 0;
   }
 
-  5% {
+  2% {
     opacity: 1;
   }
 

@@ -8,11 +8,8 @@ body.part3 {
   animation: stop-scroll 2s calc(var(--scroll) * -2s) ease-in-out paused;
 }
 
-/* IMPORT BOSSTITCH FONT */
-@import url('https://fonts.googleapis.com/css2?family=Dokdo&display=swap');
-
 .bosstitch-text {
-  font-family: 'Dokdo', cursive;
+  font-family: 'Dokdo';
 }
 
 /* BUTTON TO GO BACK */

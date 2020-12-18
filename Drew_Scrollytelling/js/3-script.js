@@ -47,6 +47,7 @@ joinButton.addEventListener('click', function startCall() {
     drewWindow.classList.remove("scaleDown");
     leaveButton.classList.remove("scaleDown");
     textBox.classList.remove("hidden");
+    document.querySelector(".jointone").play();
 })
 
 
@@ -166,3 +167,5 @@ new TypeIt("#phrase5", {
     speed: 50,
     waitUntilVisible: true
 }).go();
+
+
