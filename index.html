@@ -13,36 +13,79 @@
 <body>
 
   <style>
-    body {
+    /* FONT */
+    /* "An emotional story.... */
+    p {
+      position: absolute;
+      top: calc(50vh - 200px);
+      font-family: dokdo;
       text-align: center;
-      font-size: 1.5em;
+      font-size: 1.5rem;
+      padding: 10px;
     }
-
-    a {
+    /* "DREWS LIFE" */
+    b {
+      font-size: 2rem;
+      font-family: dokdo;
       background-color: black;
       color: white;
-      font-family: 'DOKDO';
-      font-size: 2em;
+      padding: 1px;
     }
 
-    img{
+    h4 {
+      font-size: 1.5rem;
+      font-family: dokdo;
+      position: relative;
+      top: calc(50vh + 100px);
+      text-align: center;
+    }
+
+    /* BACKGROUND OF DREW */
+    .black-circle {
+      position: absolute;
+      /* overflow: hidden; */
       width: 150px;
+      height: 150px;
+      top: calc(50vh - 75px);
+      left: calc(50vw - 75px);
+      border-radius: 50%;
+      background-color: black;
+      animation: wiggle-effect 2s infinite;
+    }
+
+    /* DREW */
+    .drew-popup {
+      position: absolute;
+      left: 0;
+      top: 0px;
+      width: 150px;
+      transition: 0.2s;
+      transform-origin: bottom;
+      transform: scale(0.6);
+    }
+
+    .drew-popup:hover {
+      transform: scale(1);
+    }
+    .drew-popup:active {
+      transform: scale(1);
     }
   </style>
 
-  
+  <!--BACKGROUND TEXTURE -->
+  <img class="paper-texture" src="Drew_Scrollytelling/img/paper-background-horizontal.jpg">
+
+
 
   <!-- PICTURE AND TEXT -->
-  <br><br>
-  <h1>
-    <br>
-    <img src="Drew_Scrollytelling/img/gear-black.png">
-    <a href="Drew_Scrollytelling/index.html">
-      <br>BUTTON TO VISIT DREW
+  <div class="black-circle">
+    <a href="Drew_Scrollytelling/index.html"><img class="drew-popup" src="Drew_Scrollytelling/img/faces/start-drew.png">
     </a>
-  </h1>
-  <p><br>Giada Rastelli, Paula Weibel <br> Mentorat5, HS20</p>
-  
+  </div>
+
+  <p><b>DREW'S LIFE</b><br><br>An emotional story through the daily struggles of a designer. Follow Drew and scroll
+    through.</p>
+  <h4>Giada Rastelli, Paula Weibel<br> Mentorat5, HS20</h4>
 
 
 </body>
