@@ -88,7 +88,9 @@ body.part3 {
 /* DREW HIMSELF */
 .drew-call {
   position: absolute;
-  width: 20vw;
+  top: 50px;
+  width: 15vw;
+  right: 3vw;
   transform-origin: bottom center;
   animation: wiggle-effect 2s ease-in-out infinite;
 }
@@ -142,15 +144,23 @@ body.part3 {
 /* ANIMATION BOSSBITCH WIGGLE */
 @keyframes boss-wiggle-effect {
   0% {
-    transform: rotate(2deg);
+    transform: rotate(-0.2deg);
+  }
+
+  25% {
+    transform: rotate(0.3deg);
   }
 
   50% {
-    transform: rotate(-2deg);
+    transform: rotate(-0.3deg);
+  }
+
+  75% {
+    transform: rotate(0.3deg);
   }
 
   100% {
-    transform: rotate(2deg);
+    transform: rotate(-0.2deg);
   }
 }
 
