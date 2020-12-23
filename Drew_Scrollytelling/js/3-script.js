@@ -114,7 +114,7 @@ var updateProgress = function () {
         }
 
         // SHOW 'CALL ENDED' SCREEN
-        if (percentage >= 80 && percentage < 100) {
+        if (percentage >= 80 && percentage < 102) {
             document.querySelector(".call-ended").classList.remove("hidden");
 
         } else {
@@ -122,7 +122,7 @@ var updateProgress = function () {
         }
 
         // FACE 3 (MORE SAD FACE) AND TEXT 5 (OH OK)
-        if (percentage >= 90 && percentage < 100) {
+        if (percentage >= 90 && percentage < 102) {
             moreSadFace.style.opacity = 1;
 
         } else {
