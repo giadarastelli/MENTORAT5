@@ -15,7 +15,6 @@ var phrase1 = document.querySelector("#phrase1");
 var phrase2 = document.querySelector("#phrase2");
 var phrase3 = document.querySelector("#phrase3");
 var phrase4 = document.querySelector("#phrase4");
-var phrase5 = document.querySelector("#phrase5");
 // GET JOIN MEETING (START)
 var startScreen = document.querySelector(".start-screen");
 var joinButton = document.querySelector(".join-button");
@@ -34,7 +33,6 @@ phrase1.style.display = "block";
 phrase2.style.display = "none";
 phrase3.style.display = "none";
 phrase4.style.display = "none";
-phrase5.style.display = "none";
 
 // SET PAGE OVERFLOW HIDDEN
 scrollPage.style.overflow = "hidden";
@@ -126,11 +124,10 @@ var updateProgress = function () {
         // FACE 3 (MORE SAD FACE) AND TEXT 5 (OH OK)
         if (percentage >= 90 && percentage < 100) {
             moreSadFace.style.opacity = 1;
-            phrase5.style.display = "block";
 
         } else {
             moreSadFace.style.opacity = 0;
-            phrase5.style.display = "none";
+
 
         }
 
@@ -162,10 +159,3 @@ new TypeIt("#phrase4", {
     speed: 50,
     waitUntilVisible: true
 }).go();
-
-new TypeIt("#phrase5", {
-    speed: 50,
-    waitUntilVisible: true
-}).go();
-
-

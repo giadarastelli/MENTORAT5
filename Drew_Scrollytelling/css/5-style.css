@@ -239,11 +239,12 @@ body.part5 {
     }
 
     30% {
+        opacity: 1;
         stroke-dashoffset: 0px;
     }
 
-    40% {
-        opacity: 1;
+    35% {
+        opacity: 0;
         stroke-dashoffset: 0px;
     }
 }
@@ -261,6 +262,10 @@ body.part5 {
     30% {
         transform: translate(100vw, 0) scale(2);
     }
+
+    100% {
+        transform: translate(100vw, 0) scale(2);
+    }
 }
 
 @keyframes flaminghot-right {
@@ -273,6 +278,10 @@ body.part5 {
     }
 
     30% {
+        transform: translate(-100vw, 0) scale(2);
+    }
+
+    100% {
         transform: translate(-100vw, 0) scale(2);
     }
 }

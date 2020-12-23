@@ -163,7 +163,7 @@ function show_email1() {
   toast.create({
     title: 'From: Mr Bosstitch <br> Subject: New Project',
     text: '----------------------------<br> Hi Drew,<br> I have a new task for you, design a logo.<br><br> Cheers,<br> Mr. B',
-    icon: "img/button-mail.png",
+    icon: "Drew_Scrollytelling/img/button-mail.png",
     callback: function () {
       enableScroll();
       // SecondPart();
@@ -178,7 +178,7 @@ function show_email2() {
   toast.create({
     title: 'From: Mr Bosstitch <br> Subject: i forgot...',
     text: '----------------------------<br> Hi Drew,<br>please finish the project by the end of the week.<br><br> Cheers,<br> Mr. B',
-    icon: "img/button-mail.png",
+    icon: "Drew_Scrollytelling/img/button-mail.png",
     callback: function () {
       enableScroll();
       SecondPart();
@@ -204,7 +204,7 @@ function enableScroll() {
 }
 
 function SecondPart() {
-  window.location.replace("part2.html");
+  window.location.replace("Drew_Scrollytelling/part2.html");
   reload();
 }
 

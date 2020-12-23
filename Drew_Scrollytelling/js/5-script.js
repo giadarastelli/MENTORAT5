@@ -157,31 +157,31 @@ var updateProgress = function () {
       setTimeout(function () {
         document.querySelector(".messagetone").currentTime = 0;
         document.querySelector(".messagetone").play();
-      },50);
+      }, 50);
       setTimeout(function () {
         document.querySelector(".messagetone").currentTime = 0;
         document.querySelector(".messagetone").play();
-      },100);
+      }, 100);
       setTimeout(function () {
         document.querySelector(".messagetone").currentTime = 0;
         document.querySelector(".messagetone").play();
-      },150);
+      }, 150);
       setTimeout(function () {
         document.querySelector(".messagetone").currentTime = 0;
         document.querySelector(".messagetone").play();
-      },200);
+      }, 200);
       setTimeout(function () {
         document.querySelector(".messagetone").currentTime = 0;
         document.querySelector(".messagetone").play();
-      },300);
+      }, 300);
       setTimeout(function () {
         document.querySelector(".messagetone").currentTime = 0;
         document.querySelector(".messagetone").play();
-      },500);
+      }, 500);
       setTimeout(function () {
         document.querySelector(".messagetone").currentTime = 0;
         document.querySelector(".messagetone").play();
-      },700);
+      }, 700);
 
     }
 
@@ -219,8 +219,8 @@ function show_email2() {
 // SECOND SPAM MAIL (MC ERASER)
 function show_email3() {
   toast.create({
-    title: 'From: Mc Eraser',
-    text: '----------------------------<br>Hi DREW, i need you.<br> Mc Eraser',
+    title: 'From: Paper JR',
+    text: '----------------------------<br>Hello Drew, are you free for a meeting next week? <br> PJR',
     icon: "img/button-mail.png",
     callback: function () {}
   });
