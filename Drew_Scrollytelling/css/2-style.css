@@ -89,11 +89,21 @@ h1 {
 /* VIDEO CALL BUTTON */
 .button-video {
     position: fixed;
-    top: calc(50vh - 15vw);
-    left: calc(50vw - 15vw);
-    width: 30vw;
+    top: calc(50vh - 15vh);
+    left: calc(50vw - 15vh);
+    width: 30vh;
     transform: scale(0);
     animation: video-button 2s calc(var(--scroll) * -2s) ease-in-out paused;
+}
+
+/* PAPERPLANE */
+.button-paperplane {
+    position: fixed;
+    top: 30vh;
+    left: calc(50vw - 15vh);
+    width: 30vh;
+    transform: scale(0);
+    animation: paperplane-button 2s calc(var(--scroll) * -2s) ease-in-out paused;
 }
 
 /* ANIMATION DREW */
@@ -131,6 +141,29 @@ h1 {
 
     100% {
         transform: scale(1);
+    }
+}
+
+/* ANIMATION PAPERPLANE */
+@keyframes paperplane-button {
+    70% {
+        
+        transform: scale(0);
+    }
+
+    72% {
+        transform: scale(1);
+    }
+    79% {
+        top: 30vh;
+        left: calc(50vw - 15vh);
+        transform: scale(1);
+    }
+
+    85% {
+        left: 100vw;
+        top: -30vh;
+        transform: scale(0);
     }
 }
 

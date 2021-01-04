@@ -59,16 +59,7 @@ var updateProgress = function () {
   let search = document.querySelectorAll(".part2");
   search.forEach(function () {
 
-    // //TEXT 1 UND IDEA-FACE DREW
-    // if (percentage >= 50 && percentage < 90) {
-    //   phrase1.style.display = "block";
-    //   happyFace.style.opacity = 1;
-    // }
-
-    // if (percentage >= 0 && percentage < 90) {
-    //   // !!!! INSERT STORY CONTENT HERE !!!!!
-    // }
-
+    
     //FACE 1 (THINKING)
     if (percentage >= 40 && percentage < 60) {
       thinkingFace.style.opacity = 1;
@@ -93,14 +84,14 @@ var updateProgress = function () {
       phrase1.style.display = "none";
     }
 
-    //TEXT 2
+    //TEXT 2 (LETS SEND IT TO THE BOSS)
     if (percentage >= 70 && percentage < 80) {
       phrase2.style.display = "block";
     } else {
       phrase2.style.display = "none";
     }
 
-    //TEXT 3
+    //TEXT 3 ( BOSS IS CALLING)
     if (percentage >= 94 && percentage < 100) {
       phrase3.style.display = "block";
     } else {
