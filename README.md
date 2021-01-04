@@ -4,5 +4,5 @@ Dre(a)w
 a short story about the daily routine of a designer 👨‍🎨
 
 [to the story!](https://drew-the-designer.netlify.app)
-![shot](shot3.png)
+![shot](cover.png)
 
