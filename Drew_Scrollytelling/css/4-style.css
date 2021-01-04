@@ -7,38 +7,38 @@ body.part4 {
     animation: stop-scroll 2s calc(var(--scroll) * -2s) ease-in-out paused;
 }
 
-/* DREW */
-.faces.part4 {
-    position: fixed;
-    bottom: 20vh;
-    left: calc(50vw - 73px);
-    height: 50vh;
-    width: 73px;
-    transform-origin: bottom;
-    z-index: 0;
-    animation: drew-story4 2s ease-in-out calc(var(--scroll) * -2s) paused;
-}
-
 /*DREW CHANGING TO BLACK*/
 .drew-nervous-black {
     position: fixed;
-    bottom: 20vh;
-    left: calc(50vw - 73px);
+    opacity: 1;
+    top: 30vh;
+    left: 50vw;
     height: 50vh;
     width: 73px;
+    transform: scale(1) translate(0, 0);
     transform-origin: bottom;
-    z-index: 1;
     animation: drew-story4-black 2s ease-in-out calc(var(--scroll) * -2s) paused;
 }
 
+/* DREW */
+.faces {
+    position: fixed;
+    opacity: 1;
+    top: 30vh;
+    left: 50vw;
+    height: 50vh;
+    width: 73px;
+    transform: scale(1) translate(0, 0);
+    transform-origin: bottom;
+    animation: drew-story4 2s ease-in-out calc(var(--scroll) * -2s) paused;
+}
+
+
 @keyframes drew-story4 {
     0% {
+        opacity: 1;
         transform: scale(1) translate(0, 0);
-    }
-
-    20% {
-        transform: scale(1) translate(0, 0);
-
+        z-index: 1;
     }
 
     30% {
@@ -55,8 +55,7 @@ body.part4 {
         z-index: 1;
         transform: scale(2) translate(0, 30vh);
         opacity: 1;
-        left: calc(50vw - 73px);
-
+        left: 50vw;
     }
 
     75% {
@@ -73,15 +72,8 @@ body.part4 {
 }
 
 @keyframes drew-story4-black {
-    0% {
-        opacity: 0;
-    }
-
-    20% {
-
-        transform: scale(1) translate(0, 0);
-
-    }
+    0% {transform: scale(1) translate(0, 0);
+        z-index: 0;}
 
     30% {
         transform: scale(1) translate(0, 0);
@@ -91,12 +83,11 @@ body.part4 {
     35% {
         z-index: 1;
         transform: scale(2) translate(0, 30vh);
-        left: calc(50vw - 73px);
+        left: 50vw;
         opacity: 0;
-
     }
 
-    45% {
+    38% {
         opacity: 1;
     }
 

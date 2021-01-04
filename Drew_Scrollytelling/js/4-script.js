@@ -57,7 +57,7 @@ var updateProgress = function () {
   search.forEach(function () {
 
     //FACE 1 (SAD)
-    if (percentage >= 0 && percentage < 23) {
+    if (percentage < 23) {
       sadFace.style.opacity = 1;
     } else {
       sadFace.style.opacity = 0;

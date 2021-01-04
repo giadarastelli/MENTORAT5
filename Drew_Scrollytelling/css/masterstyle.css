@@ -107,6 +107,30 @@ body {
   }
 }
 
+/* DREW WIGGLE BLACK*/
+.wiggle-black {
+  position: fixed;
+  height: 50vh;
+  transform-origin: bottom center;
+  animation: wiggle-effect-black 2s ease-in-out infinite
+}
+
+
+/* ANIMATION DREW WIGGLE */
+@keyframes wiggle-effect-black {
+  0% {
+    transform: rotate(2deg);
+  }
+
+  50% {
+    transform: rotate(-2deg);
+  }
+
+  100% {
+    transform: rotate(2deg);
+  }
+}
+
 /* ANIMATION BUTTON TO GO BACK */
 @keyframes up {
   0% {
