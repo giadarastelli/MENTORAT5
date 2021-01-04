@@ -1,8 +1,6 @@
-# MENTORAT5
-Dre(a)w
+# MENTORAT5 Scrollytelling 📖
+a short story about the daily routine of a designer ✏️ called drew
 
-a short story about the daily routine of a designer 👨‍🎨
-
-[to the story!](https://drew-the-designer.netlify.app)
 ![shot](cover.png)
 
+☞ [to the story!](https://drew-the-designer.netlify.app)
