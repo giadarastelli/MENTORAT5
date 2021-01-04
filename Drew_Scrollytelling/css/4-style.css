@@ -78,7 +78,6 @@ body.part4 {
     30% {
         transform: scale(1) translate(0, 0);
         z-index: 0;
-        opacity: 0;
     }
 
     35% {
