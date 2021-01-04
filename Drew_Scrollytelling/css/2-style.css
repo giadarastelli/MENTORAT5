@@ -21,9 +21,26 @@ h1 {
     top: 42vh;
     left: -150vw;
     width: 10vw;
-    font-size: 5rem;
+    font-size: 4rem;
     animation: text-move 2s ease-in calc(var(--scroll) * -2s) paused;
 }
+
+/* TWO HOURS LATER TEXT*/
+h2 {
+    position: fixed;
+    top: 10vh;
+    left: 200vw;
+    background-color: white;
+    margin: 0px;
+    padding: 15px;
+    border: 5px solid black;
+    border-radius: 25px;
+    filter: drop-shadow(3px 3px 0 black);
+    font-size: 4rem;
+    white-space: nowrap;
+    animation: text-move2 2s ease-in calc(var(--scroll) * -2s) paused;
+}
+
 
 /* GEARS*/
 .white-gear1 {
@@ -89,9 +106,10 @@ h1 {
 /* VIDEO CALL BUTTON */
 .button-video {
     position: fixed;
-    top: calc(50vh - 15vh);
+    top: calc(50vh + 10vh);
     left: calc(50vw - 15vh);
     width: 30vh;
+    filter: drop-shadow(3px 3px 0 black);
     transform: scale(0);
     animation: video-button 2s calc(var(--scroll) * -2s) ease-in-out paused;
 }
@@ -102,6 +120,7 @@ h1 {
     top: 30vh;
     left: calc(50vw - 15vh);
     width: 30vh;
+    filter: drop-shadow(2px 0px 0 black);
     transform: scale(0);
     animation: paperplane-button 2s calc(var(--scroll) * -2s) ease-in-out paused;
 }
@@ -127,44 +146,6 @@ h1 {
     90% {}
 
     100% {}
-}
-
-/* ANIMATION VIDEO-BUTTON */
-@keyframes video-button {
-    92% {
-        transform: scale(0);
-    }
-
-    95% {
-        transform: scale(1);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
-
-/* ANIMATION PAPERPLANE */
-@keyframes paperplane-button {
-    70% {
-        
-        transform: scale(0);
-    }
-
-    72% {
-        transform: scale(1);
-    }
-    79% {
-        top: 30vh;
-        left: calc(50vw - 15vh);
-        transform: scale(1);
-    }
-
-    85% {
-        left: 100vw;
-        top: -30vh;
-        transform: scale(0);
-    }
 }
 
 /* KANN MAN DEAKTIVIEREN, FALLS NERVT (ABER OHNE STOP-SCROLL IST ANIMATION BEI 100% NICHT MEHR SICHTBAR) */
@@ -357,10 +338,15 @@ h1 {
         transform-origin: center;
     }
 
+    55% {
+        opacity: 1;
+    }
+
     58% {
         transform: scale(0.5);
         bottom: 50vh;
         transform-origin: center;
+        opacity: 0;
     }
 
     60% {
@@ -371,5 +357,64 @@ h1 {
 
     100% {
         transform: scale(0);
+        opacity: 0;
+    }
+}
+
+/* ANIMATION PAPERPLANE */
+@keyframes paperplane-button {
+    70% {
+        transform: scale(0);
+    }
+
+    72% {
+        transform: scale(1);
+    }
+
+    77% {
+        top: 30vh;
+        left: calc(50vw - 15vh);
+        transform: scale(1);
+    }
+
+    85% {
+        left: 100vw;
+        top: -10vh;
+        transform: scale(0);
+    }
+}
+
+/* ANIMATION HOURS LATER*/
+@keyframes text-move2 {
+
+    0% {
+        left: 200vw;
+    }
+
+    75% {
+        left: 200vw;
+    }
+
+    92% {
+        left: -200vw;
+    }
+
+    100% {
+        left: -200vw;
+    }
+}
+
+/* ANIMATION VIDEO-BUTTON */
+@keyframes video-button {
+    92% {
+        transform: scale(0);
+    }
+
+    95% {
+        transform: scale(0.8);
+    }
+
+    100% {
+        transform: scale(0.8);
     }
 }
