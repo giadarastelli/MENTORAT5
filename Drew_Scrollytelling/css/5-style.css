@@ -208,6 +208,7 @@ body.part5 {
     top: calc(50vh - 100px);
     left: calc(50vw - 25vw);
     width: 50vw;
+    /* height: calc(50vh - 100px); */
     transform: scale(0);
     animation: credits 2s calc(var(--scroll) * -2s) ease-in-out paused;
 }
@@ -215,7 +216,7 @@ body.part5 {
 /* CREDITS DREW ICON */
 .credits.drew-icon {
     left: calc(25vw - 50px);
-    top: 150px;
+    top: 30vh;
     width: 100px;
     transition: 0.2s;
 }
@@ -223,8 +224,8 @@ body.part5 {
 /* CREDITS HOVER EFFECT DREW ICON */
 .drew-icon:hover {
     left: calc(25vw - 60px);
-    top: 140px;
     width: 120px;
+    top: calc(30vh - 10px);
 }
 
 .front {
