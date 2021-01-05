@@ -72,8 +72,10 @@ body.part4 {
 }
 
 @keyframes drew-story4-black {
-    0% {transform: scale(1) translate(0, 0);
-        z-index: 0;}
+    0% {
+        transform: scale(1) translate(0, 0);
+        z-index: 0;
+    }
 
     30% {
         transform: scale(1) translate(0, 0);
@@ -124,8 +126,16 @@ body.part4 {
         left: calc(50vw - 200px);
     }
 
-    100% {
+    75% {
         left: calc(50vw - 200px);
+    }
+
+    80% {
+        left: calc(0vw - 200px);
+    }
+
+    100% {
+        left: calc(0vw - 200px);
     }
 }
 
