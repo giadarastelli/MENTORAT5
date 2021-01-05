@@ -1,7 +1,10 @@
-# MENTORAT5 Scrollytelling 📖
-a short story about the daily routine of a designer ✏️ called drew
+# SCROLLYTELLING WEBSITE 📖
+A humorous short story about the daily routine and the problems of a designer and called Drew. ✏️
+ <br />
+![shot](title-cover.png)
 
-![shot](cover.png)
 ### 👉 [to the story!](https://drew-the-designer.netlify.app)
 
-*project by giada rastelli / paula weibel, 2021 ✌️*
+
+Hochschule Luzern • Digital Ideation • Mentorat 5 <br />
+*Paula Weibel & Giada Rastelli ✌️*
