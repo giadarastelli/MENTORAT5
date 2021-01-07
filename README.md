@@ -9,4 +9,4 @@ A humorous short story about the daily routine and the problems of a designer ca
 Hochschule Luzern • Digital Ideation • Mentorat 5 <br />
 
 
-*[Paula Weibel](https://github.com/paulaweibel) & [Giada Rastelli](https://github.com/giadarastelli) ✌️*
+*[Paula Weibel](https://github.com/paulaweibel) • [Giada Rastelli](https://github.com/giadarastelli) ✌️*
