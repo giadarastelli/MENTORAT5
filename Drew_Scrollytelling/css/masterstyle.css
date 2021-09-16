@@ -1,20 +1,11 @@
 /* MASTER STYLING: FOR ALL HTMLS */
 
 /* IMPORT DREW FONT (Nanum Pen Script) */
-@font-face {
-  font-family: Nanum;
-  src: url(font-drew.ttf);
-}
-
-/* IMPORT BOSSBITCH FONT (DOKDO REGULAR) */
-@font-face {
-  font-family: Dokdo;
-  src: url(font-bosstitch.ttf);
-}
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
 
 /* MASTER BODY*/
 body {
-  font-family: 'Nanum';
+  font-family: 'Nanum Pen Script';
   font-size: 3rem;
   background: white;
 }
