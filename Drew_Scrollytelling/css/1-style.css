@@ -229,7 +229,7 @@ body.part1 {
   top: 0;
   left: 50px;
   width: calc(100vw - 100px);
-  font-family: 'Nanum';
+  font-family: 'Nanum Pen Script';
 }
 
 .cooltoast-toast {

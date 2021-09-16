@@ -8,10 +8,6 @@ body.part3 {
   animation: stop-scroll 2s calc(var(--scroll) * -2s) ease-in-out paused;
 }
 
-.bosstitch-text {
-  font-family: 'Nanum';
-}
-
 /* BUTTON TO GO BACK */
 .up {
   background-color: white;
